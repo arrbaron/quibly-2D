@@ -3004,10 +3004,6 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="483750688662969" type="Quibly" />
-                                <action id="0" name="Call function" sid="281713251739213" type="Function">
-                                    <param id="0" name="Name">&quot;CheckMatchEnd&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
                                 <action id="-12" name="Set group active" sid="480167262769490" type="System">
                                     <param id="0" name="Group name">&quot;Match End&quot;</param>
                                     <param id="1" name="State">1</param>
