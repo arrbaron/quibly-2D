@@ -26,10 +26,10 @@
                             <param id="1" name="Angle">angle(Bullet.X, Bullet.Y, Quibly.X, Quibly.Y )</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-6" name="Set height" sid="944761985349232" type="Healthbar">
-                            <param id="0" name="Height">Quibly.Damage / 2</param>
+                        <action disabled="1" id="-16" name="Set opacity" sid="944761985349232" type="Healthbar">
+                            <param id="0" name="Opacity">Quibly.Damage</param>
                         </action>
-                        <action behavior="Flash" id="0" name="Flash" sid="768160214535647" type="Healthbar">
+                        <action behavior="Flash" disabled="1" id="0" name="Flash" sid="768160214535647" type="Healthbar">
                             <param id="0" name="&apos;On&apos; time">0.1</param>
                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                             <param id="2" name="Duration">0.5</param>

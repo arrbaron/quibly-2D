@@ -69,10 +69,10 @@
                 </event-block>
                 <event-block sid="755011159748960">
                     <conditions>
-                        <condition id="-18" name="On created" sid="691387911914893" type="Gun" />
+                        <condition id="-18" name="On created" sid="691387911914893" type="Head" />
                     </conditions>
                     <actions>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="984642885060608" type="Gun">
+                        <action behavior="Pin" id="0" name="Pin to object" sid="984642885060608" type="Head">
                             <param id="0" name="Pin to">Quibly</param>
                             <param id="1" name="Mode">0</param>
                         </action>
@@ -102,13 +102,79 @@
                     <actions>
                         <action id="-3" name="Set position" sid="171262986360450" type="Healthbar">
                             <param id="0" name="X">Quibly.X</param>
-                            <param id="1" name="Y">Quibly.Y + 32</param>
+                            <param id="1" name="Y">Quibly.Y</param>
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="303671989972794" type="Healthbar">
                             <param id="0" name="Pin to">Quibly</param>
                             <param id="1" name="Mode">0</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="154762261500810" title="Update">
+            <sub-events>
+                <event-block sid="568909698950237">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="524571641352661" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="488733140070207">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="285616316944779" type="System">
+                                    <param id="0" name="Object">Quibly</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="738563192211571">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="436597188227739" type="Quibly">
+                                            <param id="0" name="Instance variable">ControllerPlayer</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block any="1" sid="722999485849468">
+                                            <conditions>
+                                                <condition behavior="Physics" id="1" name="Compare velocity" sid="185532026708426" type="Quibly">
+                                                    <param id="0" name="Which">2</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">0.5</param>
+                                                </condition>
+                                                <condition id="5" name="Compare axis" sid="714732084199663" type="Gamepad">
+                                                    <param id="0" name="Gamepad">0</param>
+                                                    <param id="1" name="Axis">2</param>
+                                                    <param id="2" name="Comparison">1</param>
+                                                    <param id="3" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-21" name="Rotate toward position" sid="749358588452064" type="Quibly">
+                                                    <param id="0" name="Degrees">Quibly.RotationSpeed</param>
+                                                    <param id="1" name="X">Reticle.X</param>
+                                                    <param id="2" name="Y">Reticle.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="379654537566178">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="684112999569829" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-21" name="Rotate toward position" sid="182704771546498" type="Quibly">
+                                            <param id="0" name="Degrees">Quibly.RotationSpeed</param>
+                                            <param id="1" name="X">Mouse.X</param>
+                                            <param id="2" name="Y">Mouse.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -209,6 +275,12 @@
                                     <param id="0" name="Animation">&quot;P&quot; &amp; Quibly.PlayerNum</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="5" name="Set frame" sid="877100973414743" type="Shield">
+                                    <param id="0" name="Frame number">Quibly.PlayerNum - 1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="710931690020701" type="Head">
+                                    <param id="0" name="Frame number">Quibly.PlayerNum - 1</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="743800004286366">
@@ -271,9 +343,19 @@
                                     <param id="0" name="Instance variable">PlayerNum</param>
                                     <param id="1" name="Value">PlayersConnected</param>
                                 </action>
+                                <action id="-13" name="Set boolean" sid="147960334910531" type="Quibly">
+                                    <param id="0" name="Instance variable">ControllerPlayer</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                                 <action id="4" name="Set animation" sid="282015224752805" type="Quibly">
                                     <param id="0" name="Animation">&quot;P&quot; &amp; Quibly.PlayerNum</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="185122495919607" type="Shield">
+                                    <param id="0" name="Frame number">Quibly.PlayerNum - 1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="359771295731507" type="Head">
+                                    <param id="0" name="Frame number">Quibly.PlayerNum - 1</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -313,7 +395,7 @@
                                         <condition id="-1" name="Every tick" sid="342529402683891" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-22" name="Set angle toward position" sid="874081700784733" type="Gun">
+                                        <action id="-22" name="Set angle toward position" sid="874081700784733" type="Head">
                                             <param id="0" name="X">Mouse.X</param>
                                             <param id="1" name="Y">Mouse.Y</param>
                                         </action>
@@ -382,7 +464,7 @@
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="527159493893180" type="Quibly">
                                             <param id="0" name="Instance variable">IsShielding</param>
                                         </condition>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="446949794559623" type="Gun">
+                                        <condition id="-8" name="Is boolean instance variable set" sid="446949794559623" type="Head">
                                             <param id="0" name="Instance variable">CanFire</param>
                                         </condition>
                                     </conditions>
@@ -395,10 +477,13 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Spawn another object" sid="937846402065950" type="Gun">
+                                                <action id="0" name="Spawn another object" sid="937846402065950" type="Head">
                                                     <param id="0" name="Object">Bullet</param>
                                                     <param id="1" name="Layer">0</param>
                                                     <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="726107097954972" type="Bullet">
+                                                    <param id="0" name="Frame number">Quibly.PlayerNum -1</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="585771619147869" type="Bullet">
                                                     <param id="0" name="Instance variable">Owner</param>
@@ -409,18 +494,18 @@
                                                     <param id="1" name="Value">1</param>
                                                 </action>
                                                 <action behavior="Physics" id="5" name="Apply impulse at angle" sid="542267676936357" type="Quibly">
-                                                    <param id="0" name="Impulse">Gun.RecoilForce</param>
+                                                    <param id="0" name="Impulse">Head.RecoilForce</param>
                                                     <param id="1" name="Angle">angle(Quibly.X  * -1, Quibly.Y  * -1, Mouse.X  * -1, Mouse.Y  * -1)</param>
                                                     <param id="2" name="Image point">0</param>
                                                 </action>
-                                                <action id="-13" name="Set boolean" sid="532169700453538" type="Gun">
+                                                <action id="-13" name="Set boolean" sid="532169700453538" type="Head">
                                                     <param id="0" name="Instance variable">CanFire</param>
                                                     <param id="1" name="Value">0</param>
                                                 </action>
                                                 <action id="-16" name="Wait" sid="685141689771873" type="System">
-                                                    <param id="0" name="Seconds">Gun.FireCooldown</param>
+                                                    <param id="0" name="Seconds">Head.FireCooldown</param>
                                                 </action>
-                                                <action id="-13" name="Set boolean" sid="377754443217563" type="Gun">
+                                                <action id="-13" name="Set boolean" sid="377754443217563" type="Head">
                                                     <param id="0" name="Instance variable">CanFire</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
@@ -513,7 +598,7 @@
                                         <condition id="-1" name="Every tick" sid="558790422984280" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-22" name="Set angle toward position" sid="978522077874069" type="Gun">
+                                        <action id="-22" name="Set angle toward position" sid="978522077874069" type="Head">
                                             <param id="0" name="X">Reticle.X</param>
                                             <param id="1" name="Y">Reticle.Y</param>
                                         </action>
@@ -635,15 +720,18 @@
                                                     <param id="0" name="Gamepad">0</param>
                                                     <param id="1" name="Button">7</param>
                                                 </condition>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="915202752557348" type="Gun">
+                                                <condition id="-8" name="Is boolean instance variable set" sid="915202752557348" type="Head">
                                                     <param id="0" name="Instance variable">CanFire</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Spawn another object" sid="535118991841365" type="Gun">
+                                                <action id="0" name="Spawn another object" sid="535118991841365" type="Head">
                                                     <param id="0" name="Object">Bullet</param>
                                                     <param id="1" name="Layer">0</param>
                                                     <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="334606033806216" type="Bullet">
+                                                    <param id="0" name="Frame number">Quibly.PlayerNum -1</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="771608761605714" type="Bullet">
                                                     <param id="0" name="Instance variable">Owner</param>
@@ -654,18 +742,18 @@
                                                     <param id="1" name="Value">1</param>
                                                 </action>
                                                 <action behavior="Physics" id="5" name="Apply impulse at angle" sid="912522632540734" type="Quibly">
-                                                    <param id="0" name="Impulse">Gun.RecoilForce</param>
+                                                    <param id="0" name="Impulse">Head.RecoilForce</param>
                                                     <param id="1" name="Angle">angle(Quibly.X  * -1, Quibly.Y  * -1, Reticle.X  * -1, Reticle.Y  * -1)</param>
                                                     <param id="2" name="Image point">0</param>
                                                 </action>
-                                                <action id="-13" name="Set boolean" sid="192506042125465" type="Gun">
+                                                <action id="-13" name="Set boolean" sid="192506042125465" type="Head">
                                                     <param id="0" name="Instance variable">CanFire</param>
                                                     <param id="1" name="Value">0</param>
                                                 </action>
                                                 <action id="-16" name="Wait" sid="427337397176215" type="System">
-                                                    <param id="0" name="Seconds">Gun.FireCooldown</param>
+                                                    <param id="0" name="Seconds">Head.FireCooldown</param>
                                                 </action>
-                                                <action id="-13" name="Set boolean" sid="134748783341812" type="Gun">
+                                                <action id="-13" name="Set boolean" sid="134748783341812" type="Head">
                                                     <param id="0" name="Instance variable">CanFire</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
@@ -760,7 +848,7 @@
                                         <condition id="-1" name="Every tick" sid="874630601121443" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-22" name="Set angle toward position" sid="831739603975826" type="Gun">
+                                        <action id="-22" name="Set angle toward position" sid="831739603975826" type="Head">
                                             <param id="0" name="X">Reticle.X</param>
                                             <param id="1" name="Y">Reticle.Y</param>
                                         </action>
@@ -882,12 +970,12 @@
                                                     <param id="0" name="Gamepad">1</param>
                                                     <param id="1" name="Button">7</param>
                                                 </condition>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="898547010692405" type="Gun">
+                                                <condition id="-8" name="Is boolean instance variable set" sid="898547010692405" type="Head">
                                                     <param id="0" name="Instance variable">CanFire</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Spawn another object" sid="425871509065977" type="Gun">
+                                                <action id="0" name="Spawn another object" sid="425871509065977" type="Head">
                                                     <param id="0" name="Object">Bullet</param>
                                                     <param id="1" name="Layer">0</param>
                                                     <param id="2" name="Image point">1</param>
@@ -901,18 +989,18 @@
                                                     <param id="1" name="Value">1</param>
                                                 </action>
                                                 <action behavior="Physics" id="5" name="Apply impulse at angle" sid="526951477396336" type="Quibly">
-                                                    <param id="0" name="Impulse">Gun.RecoilForce</param>
+                                                    <param id="0" name="Impulse">Head.RecoilForce</param>
                                                     <param id="1" name="Angle">angle(Quibly.X  * -1, Quibly.Y  * -1, Reticle.X  * -1, Reticle.Y  * -1)</param>
                                                     <param id="2" name="Image point">0</param>
                                                 </action>
-                                                <action id="-13" name="Set boolean" sid="727413640758811" type="Gun">
+                                                <action id="-13" name="Set boolean" sid="727413640758811" type="Head">
                                                     <param id="0" name="Instance variable">CanFire</param>
                                                     <param id="1" name="Value">0</param>
                                                 </action>
                                                 <action id="-16" name="Wait" sid="467145686417655" type="System">
-                                                    <param id="0" name="Seconds">Gun.FireCooldown</param>
+                                                    <param id="0" name="Seconds">Head.FireCooldown</param>
                                                 </action>
-                                                <action id="-13" name="Set boolean" sid="660756571172498" type="Gun">
+                                                <action id="-13" name="Set boolean" sid="660756571172498" type="Head">
                                                     <param id="0" name="Instance variable">CanFire</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
@@ -1007,7 +1095,7 @@
                                         <condition id="-1" name="Every tick" sid="171196845756570" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-22" name="Set angle toward position" sid="403930383892833" type="Gun">
+                                        <action id="-22" name="Set angle toward position" sid="403930383892833" type="Head">
                                             <param id="0" name="X">Reticle.X</param>
                                             <param id="1" name="Y">Reticle.Y</param>
                                         </action>
@@ -1129,12 +1217,12 @@
                                                     <param id="0" name="Gamepad">2</param>
                                                     <param id="1" name="Button">7</param>
                                                 </condition>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="331287639812722" type="Gun">
+                                                <condition id="-8" name="Is boolean instance variable set" sid="331287639812722" type="Head">
                                                     <param id="0" name="Instance variable">CanFire</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Spawn another object" sid="272364589364782" type="Gun">
+                                                <action id="0" name="Spawn another object" sid="272364589364782" type="Head">
                                                     <param id="0" name="Object">Bullet</param>
                                                     <param id="1" name="Layer">0</param>
                                                     <param id="2" name="Image point">1</param>
@@ -1148,18 +1236,18 @@
                                                     <param id="1" name="Value">1</param>
                                                 </action>
                                                 <action behavior="Physics" id="5" name="Apply impulse at angle" sid="929633974307417" type="Quibly">
-                                                    <param id="0" name="Impulse">Gun.RecoilForce</param>
+                                                    <param id="0" name="Impulse">Head.RecoilForce</param>
                                                     <param id="1" name="Angle">angle(Quibly.X  * -1, Quibly.Y  * -1, Reticle.X  * -1, Reticle.Y  * -1)</param>
                                                     <param id="2" name="Image point">0</param>
                                                 </action>
-                                                <action id="-13" name="Set boolean" sid="152182434627576" type="Gun">
+                                                <action id="-13" name="Set boolean" sid="152182434627576" type="Head">
                                                     <param id="0" name="Instance variable">CanFire</param>
                                                     <param id="1" name="Value">0</param>
                                                 </action>
                                                 <action id="-16" name="Wait" sid="776707646450127" type="System">
-                                                    <param id="0" name="Seconds">Gun.FireCooldown</param>
+                                                    <param id="0" name="Seconds">Head.FireCooldown</param>
                                                 </action>
-                                                <action id="-13" name="Set boolean" sid="875380317955216" type="Gun">
+                                                <action id="-13" name="Set boolean" sid="875380317955216" type="Head">
                                                     <param id="0" name="Instance variable">CanFire</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
@@ -1280,7 +1368,7 @@
                                             <param id="4" name="Client value tag">&quot;Inputs&quot;</param>
                                         </action>
                                         <action id="11" name="Sync object" sid="850016911221127" type="Multiplayer">
-                                            <param id="0" name="Object">Gun</param>
+                                            <param id="0" name="Object">Head</param>
                                             <param id="1" name="Data">3</param>
                                             <param id="2" name="Precision">1</param>
                                             <param id="3" name="Bandwidth">0</param>
@@ -1525,7 +1613,7 @@
                                                         <condition id="-1" name="Every tick" sid="593639163930993" type="System" />
                                                     </conditions>
                                                     <actions>
-                                                        <action id="-22" name="Set angle toward position" sid="925549347401259" type="Gun">
+                                                        <action id="-22" name="Set angle toward position" sid="925549347401259" type="Head">
                                                             <param id="0" name="X">Mouse.X</param>
                                                             <param id="1" name="Y">Mouse.Y</param>
                                                         </action>
@@ -1594,7 +1682,7 @@
                                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="819679676218428" type="Quibly">
                                                             <param id="0" name="Instance variable">IsShielding</param>
                                                         </condition>
-                                                        <condition id="-8" name="Is boolean instance variable set" sid="472693297240521" type="Gun">
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="472693297240521" type="Head">
                                                             <param id="0" name="Instance variable">CanFire</param>
                                                         </condition>
                                                     </conditions>
@@ -1607,7 +1695,7 @@
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action id="0" name="Spawn another object" sid="494601763061203" type="Gun">
+                                                                <action id="0" name="Spawn another object" sid="494601763061203" type="Head">
                                                                     <param id="0" name="Object">Bullet</param>
                                                                     <param id="1" name="Layer">0</param>
                                                                     <param id="2" name="Image point">1</param>
@@ -1621,18 +1709,18 @@
                                                                     <param id="1" name="Value">1</param>
                                                                 </action>
                                                                 <action behavior="Physics" id="5" name="Apply impulse at angle" sid="719142865330293" type="Quibly">
-                                                                    <param id="0" name="Impulse">Gun.RecoilForce</param>
+                                                                    <param id="0" name="Impulse">Head.RecoilForce</param>
                                                                     <param id="1" name="Angle">angle(Quibly.X  * -1, Quibly.Y  * -1, Mouse.X  * -1, Mouse.Y  * -1)</param>
                                                                     <param id="2" name="Image point">0</param>
                                                                 </action>
-                                                                <action id="-13" name="Set boolean" sid="823920009774123" type="Gun">
+                                                                <action id="-13" name="Set boolean" sid="823920009774123" type="Head">
                                                                     <param id="0" name="Instance variable">CanFire</param>
                                                                     <param id="1" name="Value">0</param>
                                                                 </action>
                                                                 <action id="-16" name="Wait" sid="374360717196498" type="System">
-                                                                    <param id="0" name="Seconds">Gun.FireCooldown</param>
+                                                                    <param id="0" name="Seconds">Head.FireCooldown</param>
                                                                 </action>
-                                                                <action id="-13" name="Set boolean" sid="513511301329681" type="Gun">
+                                                                <action id="-13" name="Set boolean" sid="513511301329681" type="Head">
                                                                     <param id="0" name="Instance variable">CanFire</param>
                                                                     <param id="1" name="Value">1</param>
                                                                 </action>
@@ -1725,7 +1813,7 @@
                                                         <condition id="-1" name="Every tick" sid="174933384469461" type="System" />
                                                     </conditions>
                                                     <actions>
-                                                        <action id="-22" name="Set angle toward position" sid="958101769775315" type="Gun">
+                                                        <action id="-22" name="Set angle toward position" sid="958101769775315" type="Head">
                                                             <param id="0" name="X">Reticle.X</param>
                                                             <param id="1" name="Y">Reticle.Y</param>
                                                         </action>
@@ -1847,12 +1935,12 @@
                                                                     <param id="0" name="Gamepad">0</param>
                                                                     <param id="1" name="Button">7</param>
                                                                 </condition>
-                                                                <condition id="-8" name="Is boolean instance variable set" sid="275109177239627" type="Gun">
+                                                                <condition id="-8" name="Is boolean instance variable set" sid="275109177239627" type="Head">
                                                                     <param id="0" name="Instance variable">CanFire</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action id="0" name="Spawn another object" sid="374993907353262" type="Gun">
+                                                                <action id="0" name="Spawn another object" sid="374993907353262" type="Head">
                                                                     <param id="0" name="Object">Bullet</param>
                                                                     <param id="1" name="Layer">0</param>
                                                                     <param id="2" name="Image point">1</param>
@@ -1866,18 +1954,18 @@
                                                                     <param id="1" name="Value">1</param>
                                                                 </action>
                                                                 <action behavior="Physics" id="5" name="Apply impulse at angle" sid="339683889576141" type="Quibly">
-                                                                    <param id="0" name="Impulse">Gun.RecoilForce</param>
+                                                                    <param id="0" name="Impulse">Head.RecoilForce</param>
                                                                     <param id="1" name="Angle">angle(Quibly.X  * -1, Quibly.Y  * -1, Reticle.X  * -1, Reticle.Y  * -1)</param>
                                                                     <param id="2" name="Image point">0</param>
                                                                 </action>
-                                                                <action id="-13" name="Set boolean" sid="829343391982928" type="Gun">
+                                                                <action id="-13" name="Set boolean" sid="829343391982928" type="Head">
                                                                     <param id="0" name="Instance variable">CanFire</param>
                                                                     <param id="1" name="Value">0</param>
                                                                 </action>
                                                                 <action id="-16" name="Wait" sid="118066187076262" type="System">
-                                                                    <param id="0" name="Seconds">Gun.FireCooldown</param>
+                                                                    <param id="0" name="Seconds">Head.FireCooldown</param>
                                                                 </action>
-                                                                <action id="-13" name="Set boolean" sid="961770444054487" type="Gun">
+                                                                <action id="-13" name="Set boolean" sid="961770444054487" type="Head">
                                                                     <param id="0" name="Instance variable">CanFire</param>
                                                                     <param id="1" name="Value">1</param>
                                                                 </action>
@@ -1972,7 +2060,7 @@
                                                         <condition id="-1" name="Every tick" sid="942927037054389" type="System" />
                                                     </conditions>
                                                     <actions>
-                                                        <action id="-22" name="Set angle toward position" sid="735776109115005" type="Gun">
+                                                        <action id="-22" name="Set angle toward position" sid="735776109115005" type="Head">
                                                             <param id="0" name="X">Reticle.X</param>
                                                             <param id="1" name="Y">Reticle.Y</param>
                                                         </action>
@@ -2094,12 +2182,12 @@
                                                                     <param id="0" name="Gamepad">1</param>
                                                                     <param id="1" name="Button">7</param>
                                                                 </condition>
-                                                                <condition id="-8" name="Is boolean instance variable set" sid="922256118927734" type="Gun">
+                                                                <condition id="-8" name="Is boolean instance variable set" sid="922256118927734" type="Head">
                                                                     <param id="0" name="Instance variable">CanFire</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action id="0" name="Spawn another object" sid="281334538157646" type="Gun">
+                                                                <action id="0" name="Spawn another object" sid="281334538157646" type="Head">
                                                                     <param id="0" name="Object">Bullet</param>
                                                                     <param id="1" name="Layer">0</param>
                                                                     <param id="2" name="Image point">1</param>
@@ -2113,18 +2201,18 @@
                                                                     <param id="1" name="Value">1</param>
                                                                 </action>
                                                                 <action behavior="Physics" id="5" name="Apply impulse at angle" sid="314602142807194" type="Quibly">
-                                                                    <param id="0" name="Impulse">Gun.RecoilForce</param>
+                                                                    <param id="0" name="Impulse">Head.RecoilForce</param>
                                                                     <param id="1" name="Angle">angle(Quibly.X  * -1, Quibly.Y  * -1, Reticle.X  * -1, Reticle.Y  * -1)</param>
                                                                     <param id="2" name="Image point">0</param>
                                                                 </action>
-                                                                <action id="-13" name="Set boolean" sid="450683392729551" type="Gun">
+                                                                <action id="-13" name="Set boolean" sid="450683392729551" type="Head">
                                                                     <param id="0" name="Instance variable">CanFire</param>
                                                                     <param id="1" name="Value">0</param>
                                                                 </action>
                                                                 <action id="-16" name="Wait" sid="951179803770329" type="System">
-                                                                    <param id="0" name="Seconds">Gun.FireCooldown</param>
+                                                                    <param id="0" name="Seconds">Head.FireCooldown</param>
                                                                 </action>
-                                                                <action id="-13" name="Set boolean" sid="624138446427652" type="Gun">
+                                                                <action id="-13" name="Set boolean" sid="624138446427652" type="Head">
                                                                     <param id="0" name="Instance variable">CanFire</param>
                                                                     <param id="1" name="Value">1</param>
                                                                 </action>
@@ -2297,11 +2385,11 @@
                                                     <param id="0" name="Instance variable">IsShooting</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
-                                                <action id="-13" name="Set boolean" sid="603992675032991" type="Gun">
+                                                <action id="-13" name="Set boolean" sid="603992675032991" type="Head">
                                                     <param id="0" name="Instance variable">CanFire</param>
                                                     <param id="1" name="Value">0</param>
                                                 </action>
-                                                <action id="0" name="Spawn another object" sid="634251750925268" type="Gun">
+                                                <action id="0" name="Spawn another object" sid="634251750925268" type="Head">
                                                     <param id="0" name="Object">Bullet</param>
                                                     <param id="1" name="Layer">0</param>
                                                     <param id="2" name="Image point">1</param>
@@ -2311,14 +2399,14 @@
                                                     <param id="1" name="Value">Quibly.Multi_ID</param>
                                                 </action>
                                                 <action behavior="Physics" id="5" name="Apply impulse at angle" sid="511134404273025" type="Quibly">
-                                                    <param id="0" name="Impulse">Gun.RecoilForce</param>
+                                                    <param id="0" name="Impulse">Head.RecoilForce</param>
                                                     <param id="1" name="Angle">angle(Quibly.X  * -1, Quibly.Y  * -1, Mouse.X  * -1, Mouse.Y  * -1)</param>
                                                     <param id="2" name="Image point">0</param>
                                                 </action>
                                                 <action id="-16" name="Wait" sid="432131610785528" type="System">
                                                     <param id="0" name="Seconds">0.25</param>
                                                 </action>
-                                                <action id="-13" name="Set boolean" sid="704060359578401" type="Gun">
+                                                <action id="-13" name="Set boolean" sid="704060359578401" type="Head">
                                                     <param id="0" name="Instance variable">CanFire</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
@@ -2357,7 +2445,7 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-22" name="Set angle toward position" sid="181706605610267" type="Gun">
+                                                <action id="-22" name="Set angle toward position" sid="181706605610267" type="Head">
                                                     <param id="0" name="X">Mouse.X</param>
                                                     <param id="1" name="Y">Mouse.Y</param>
                                                 </action>
@@ -2399,7 +2487,7 @@
                                             <param id="0" name="Object">Quibly</param>
                                         </action>
                                         <action id="16" name="Enable local input prediction" sid="863546204343973" type="Multiplayer">
-                                            <param id="0" name="Object">Gun</param>
+                                            <param id="0" name="Object">Head</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="967085686232263" type="Quibly">
                                             <param id="0" name="Instance variable">PlayerNum</param>
@@ -2434,7 +2522,7 @@
                                                     <param id="0" name="Instance variable">Inputs</param>
                                                     <param id="1" name="Value">setbit(Quibly.Inputs, 7, 1)</param>
                                                 </action>
-                                                <action id="-22" name="Set angle toward position" sid="905082784283956" type="Gun">
+                                                <action id="-22" name="Set angle toward position" sid="905082784283956" type="Head">
                                                     <param id="0" name="X">Mouse.X</param>
                                                     <param id="1" name="Y">Mouse.Y</param>
                                                 </action>
@@ -2544,7 +2632,7 @@
                                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="756231887274597" type="Quibly">
                                                             <param id="0" name="Instance variable">IsShielding</param>
                                                         </condition>
-                                                        <condition id="-8" name="Is boolean instance variable set" sid="429597988864815" type="Gun">
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="429597988864815" type="Head">
                                                             <param id="0" name="Instance variable">CanFire</param>
                                                         </condition>
                                                     </conditions>
@@ -2712,11 +2800,11 @@
                                                             <param id="0" name="Instance variable">IsShooting</param>
                                                             <param id="1" name="Value">1</param>
                                                         </action>
-                                                        <action id="-13" name="Set boolean" sid="279078577366443" type="Gun">
+                                                        <action id="-13" name="Set boolean" sid="279078577366443" type="Head">
                                                             <param id="0" name="Instance variable">CanFire</param>
                                                             <param id="1" name="Value">0</param>
                                                         </action>
-                                                        <action id="0" name="Spawn another object" sid="132935273486121" type="Gun">
+                                                        <action id="0" name="Spawn another object" sid="132935273486121" type="Head">
                                                             <param id="0" name="Object">Bullet</param>
                                                             <param id="1" name="Layer">0</param>
                                                             <param id="2" name="Image point">1</param>
@@ -2726,14 +2814,14 @@
                                                             <param id="1" name="Value">Quibly.Multi_ID</param>
                                                         </action>
                                                         <action behavior="Physics" id="5" name="Apply impulse at angle" sid="927852091399432" type="Quibly">
-                                                            <param id="0" name="Impulse">Gun.RecoilForce</param>
+                                                            <param id="0" name="Impulse">Head.RecoilForce</param>
                                                             <param id="1" name="Angle">angle(Quibly.X  * -1, Quibly.Y  * -1, Mouse.X  * -1, Mouse.Y  * -1)</param>
                                                             <param id="2" name="Image point">0</param>
                                                         </action>
                                                         <action id="-16" name="Wait" sid="413713499973899" type="System">
                                                             <param id="0" name="Seconds">0.25</param>
                                                         </action>
-                                                        <action id="-13" name="Set boolean" sid="210507036472053" type="Gun">
+                                                        <action id="-13" name="Set boolean" sid="210507036472053" type="Head">
                                                             <param id="0" name="Instance variable">CanFire</param>
                                                             <param id="1" name="Value">1</param>
                                                         </action>
@@ -2772,7 +2860,7 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="-22" name="Set angle toward position" sid="559674465370004" type="Gun">
+                                                        <action id="-22" name="Set angle toward position" sid="559674465370004" type="Head">
                                                             <param id="0" name="X">Mouse.X</param>
                                                             <param id="1" name="Y">Mouse.Y</param>
                                                         </action>
