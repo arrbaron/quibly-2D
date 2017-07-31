@@ -76,6 +76,8 @@
                 <instance-variable name="Deadzone" sid="497705266782562" type="number" />
                 <instance-variable name="DeathTimer" sid="324026772027847" type="number" />
                 <instance-variable name="Lives" sid="580799548207029" type="number" />
+                <instance-variable name="RotationSpeed" sid="711762171897291" type="number" />
+                <instance-variable name="ControllerPlayer" sid="892220948446767" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Physics" sid="181614599941760">
@@ -90,23 +92,51 @@
             </behaviors>
             <container>
                 <type>Quibly</type>
-                <type>Gun</type>
+                <type>Head</type>
                 <type>Shield</type>
                 <type>Reticle</type>
                 <type>Healthbar</type>
             </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="P1" pingpong="0" repeatcount="1" repeatto="0" sid="742500635056406" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.509804" original-source="C:\Users\The Annhilator\Downloads\20563020_10155496456737158_970157804_n (1).png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="P2" pingpong="0" repeatcount="1" repeatto="0" sid="714208194297520" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="P2" pingpong="0" repeatcount="1" repeatto="0" sid="868938398786253" speed="0">
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.509804">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="P3" pingpong="0" repeatcount="1" repeatto="0" sid="819348690684216" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="P3" pingpong="0" repeatcount="1" repeatto="0" sid="584399414843684" speed="0">
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.509804">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="P4" pingpong="0" repeatcount="1" repeatto="0" sid="181918867352876" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="P4" pingpong="0" repeatcount="1" repeatto="0" sid="885621624005073" speed="0">
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.509804">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -128,17 +158,45 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="315344319116494" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" original-source="C:\Users\The Annhilator\Downloads\Quib Bullets-red.png">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" original-source="C:\Users\The Annhilator\Downloads\Quib Bullets-green.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" original-source="C:\Users\The Annhilator\Downloads\Quib Bullets-blue.png">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" original-source="C:\Users\The Annhilator\Downloads\Quib Bullets-yellow.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
         <object-type name="Mouse" sid="636324744869243">
             <plugin id="Mouse" />
         </object-type>
-        <object-type name="Gun" sid="798159398574197">
+        <object-type name="Head" sid="798159398574197">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="RecoilForce" sid="970189037663079" type="number" />
@@ -152,20 +210,47 @@
             </behaviors>
             <container>
                 <type>Quibly</type>
-                <type>Gun</type>
+                <type>Head</type>
                 <type>Shield</type>
                 <type>Reticle</type>
                 <type>Healthbar</type>
             </container>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="806571237273845" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0">
-                        <image-point name="Imagepoint 1" x="1" y="0.5" />
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="806571237273845" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0.513514" original-source="C:\Users\The Annhilator\Downloads\Quib Body Mk. 1 (with head) - Red.png">
+                        <image-point name="Imagepoint 1" x="1" y="0.513514" />
                         <collision-poly>
-                            <point x="1" y="0" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                             <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0.513514">
+                        <image-point name="Imagepoint 1" x="1" y="0.513514" />
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0.513514">
+                        <image-point name="Imagepoint 1" x="1" y="0.513514" />
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0.513514">
+                        <image-point name="Imagepoint 1" x="1" y="0.513514" />
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -186,7 +271,7 @@
             </behaviors>
             <container>
                 <type>Quibly</type>
-                <type>Gun</type>
+                <type>Head</type>
                 <type>Shield</type>
                 <type>Reticle</type>
                 <type>Healthbar</type>
@@ -221,7 +306,7 @@
             </behaviors>
             <container>
                 <type>Quibly</type>
-                <type>Gun</type>
+                <type>Head</type>
                 <type>Shield</type>
                 <type>Reticle</type>
                 <type>Healthbar</type>
@@ -278,14 +363,25 @@
             </behaviors>
             <container>
                 <type>Quibly</type>
-                <type>Gun</type>
+                <type>Head</type>
                 <type>Shield</type>
                 <type>Reticle</type>
                 <type>Healthbar</type>
             </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="913478569272471" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5625" hotspotY="0.46875" original-source="C:\Users\The Annhilator\Downloads\20563020_10155496456737158_970157804_n (1).png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.624706" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.469776" />
+                            <point x="1" y="0.997408" />
+                            <point x="0.624706" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.469776" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -300,6 +396,14 @@
         </object-type>
         <object-type name="Text" sid="191717669189011">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="PlayerMask" sid="158129110494615">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="720647580661608" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
