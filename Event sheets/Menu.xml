@@ -5,7 +5,7 @@
     <events>
         <event-block sid="356326062992993">
             <conditions>
-                <condition id="0" name="On clicked" sid="364662770597540" type="Single" />
+                <condition id="0" name="On clicked" sid="364662770597540" type="Local" />
             </conditions>
             <actions>
                 <action id="-9" name="Set value" sid="219127940703657" type="System">
