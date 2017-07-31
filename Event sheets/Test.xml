@@ -35,5 +35,20 @@
                 </action>
             </actions>
         </event-block>
+        <event-block any="1" sid="688847153490118">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="784541058122602" type="Keyboard">
+                    <param id="0" name="Key">27 (Esc)</param>
+                </condition>
+                <condition id="6" name="On button pressed" sid="646226960613972" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="446442094830954" type="System" />
+                <action id="-21" name="Reset global variables" sid="848467469372151" type="System" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
