@@ -82,7 +82,7 @@
                         <Inputs>0</Inputs>
                         <PlayerNum>0</PlayerNum>
                         <Multi_ID></Multi_ID>
-                        <Acceleration>10</Acceleration>
+                        <Acceleration>7</Acceleration>
                         <Damage>0</Damage>
                         <DamageMultiplier>0.1</DamageMultiplier>
                         <MaxEnergy>100</MaxEnergy>
@@ -183,7 +183,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <RecoilForce>4</RecoilForce>
+                        <RecoilForce>3</RecoilForce>
                         <FireCooldown>0.33</FireCooldown>
                         <CanFire>true</CanFire>
                     </instance-variables>
@@ -397,7 +397,7 @@
                         <Inputs>0</Inputs>
                         <PlayerNum>0</PlayerNum>
                         <Multi_ID></Multi_ID>
-                        <Acceleration>10</Acceleration>
+                        <Acceleration>7</Acceleration>
                         <Damage>0</Damage>
                         <DamageMultiplier>0.1</DamageMultiplier>
                         <MaxEnergy>100</MaxEnergy>
