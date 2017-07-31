@@ -239,7 +239,7 @@
         <object-type name="Multiplayer" sid="411082520610058">
             <plugin id="Multiplayer" />
         </object-type>
-        <object-type name="Single" sid="105377318743385">
+        <object-type name="Local" sid="105377318743385">
             <plugin id="Button" />
         </object-type>
         <object-type name="Multi" sid="114433373762392">
@@ -291,6 +291,9 @@
             </instance-variables>
         </object-type>
         <object-type name="GameOver" sid="249930532784627">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text" sid="191717669189011">
             <plugin id="Text" />
         </object-type>
     </object-folder>
