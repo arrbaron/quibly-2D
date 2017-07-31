@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Quibly 2D.0</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>1xqx8c09baibh</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Scirra" id="warpradial">Warp Radial</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1200</width>
+        <height>800</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Menu</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Quibly" sid="219395906396537">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="InputNum" sid="556334816319733" type="number" />
+                <instance-variable name="Inputs" sid="522621527112278" type="number" />
+                <instance-variable name="PlayerNum" sid="460256209518136" type="number" />
+                <instance-variable name="Multi_ID" sid="112707249823179" type="string" />
+                <instance-variable name="MaxSpeed" sid="480476494188062" type="number" />
+                <instance-variable name="Acceleration" sid="862475656879745" type="number" />
+                <instance-variable name="Damage" sid="194339519179434" type="number" />
+                <instance-variable name="DamageMultiplier" sid="169084219321474" type="number" />
+                <instance-variable name="MaxEnergy" sid="464806658796618" type="number" />
+                <instance-variable name="Energy" sid="142761126723645" type="number" />
+                <instance-variable name="EnergyRechargeRate" sid="875859582165328" type="number" />
+                <instance-variable comment="The time after using an ability/shield where energy begins recharging" name="EnergyCooldown" sid="409283326305394" type="number" />
+                <instance-variable name="IsShooting" sid="515425244623286" type="boolean" />
+                <instance-variable name="IsShielding" sid="418805768117486" type="boolean" />
+                <instance-variable name="Deadzone" sid="497705266782562" type="number" />
+                <instance-variable name="DeathTimer" sid="324026772027847" type="number" />
+                <instance-variable name="Lives" sid="580799548207029" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Physics" sid="181614599941760">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="435679996945749">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="393775738850744">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Quibly</type>
+                <type>Gun</type>
+                <type>Shield</type>
+                <type>Reticle</type>
+                <type>Healthbar</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="P1" pingpong="0" repeatcount="1" repeatto="0" sid="742500635056406" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="P2" pingpong="0" repeatcount="1" repeatto="0" sid="714208194297520" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="P3" pingpong="0" repeatcount="1" repeatto="0" sid="819348690684216" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="P4" pingpong="0" repeatcount="1" repeatto="0" sid="181918867352876" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bullet" sid="588922951403106">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Force" sid="594202903549864" type="number" />
+                <instance-variable name="Damage" sid="505993463871797" type="number" />
+                <instance-variable name="Owner" sid="785153187965091" type="number" />
+                <instance-variable name="Owner_Multi" sid="774680054774714" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="948488992561492">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="950724146700405">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="315344319116494" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="636324744869243">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Gun" sid="798159398574197">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="RecoilForce" sid="970189037663079" type="number" />
+                <instance-variable name="FireCooldown" sid="889406604948709" type="number" />
+                <instance-variable name="CanFire" sid="835960049377092" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="712011458447448">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Quibly</type>
+                <type>Gun</type>
+                <type>Shield</type>
+                <type>Reticle</type>
+                <type>Healthbar</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="806571237273845" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0">
+                        <image-point name="Imagepoint 1" x="1" y="0.5" />
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="638961783419630">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Shield" sid="505297023281283">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="EnergyDrainRate" sid="716223281800602" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="759532924200382">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Quibly</type>
+                <type>Gun</type>
+                <type>Shield</type>
+                <type>Reticle</type>
+                <type>Healthbar</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="853610511070271" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Debug" sid="397757128445773">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Function" sid="541192769286614">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="Gamepad" sid="853084647373176">
+            <plugin id="gamepad" />
+        </object-type>
+        <object-type name="Reticle" sid="711998879676687">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Owner" sid="239659186137713" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="559501783225147">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Quibly</type>
+                <type>Gun</type>
+                <type>Shield</type>
+                <type>Reticle</type>
+                <type>Healthbar</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="P1" pingpong="0" repeatcount="1" repeatto="0" sid="252967095215542" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="P2" pingpong="0" repeatcount="1" repeatto="0" sid="374850426468522" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="P3" pingpong="0" repeatcount="1" repeatto="0" sid="368441813323122" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="P4" pingpong="0" repeatcount="1" repeatto="0" sid="101064971375005" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Multiplayer" sid="411082520610058">
+            <plugin id="Multiplayer" />
+        </object-type>
+        <object-type name="Single" sid="105377318743385">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Multi" sid="114433373762392">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="BG" sid="372566314068111">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="436162715976300" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\The Annhilator\Downloads\Quibly Stage 1 - 2048 (lighter).png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Killzone" sid="293538163459490">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="780770119160259" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Healthbar" sid="297937099424121">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="505720882969032">
+                    <behavior id="Flash" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="505045458546431">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Quibly</type>
+                <type>Gun</type>
+                <type>Shield</type>
+                <type>Reticle</type>
+                <type>Healthbar</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="913478569272471" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlayerLives" sid="689550778939541">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="Player" sid="385263475114411" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type name="GameOver" sid="249930532784627">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Level_01.xml</layout>
+        <layout>Menu.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Quibly.xml</event-sheet>
+        <event-sheet>Main.xml</event-sheet>
+        <event-sheet>Test.xml</event-sheet>
+        <event-sheet>Bullet.xml</event-sheet>
+        <event-sheet>Shield.xml</event-sheet>
+        <event-sheet>Menu.xml</event-sheet>
+        <event-sheet>Match.xml</event-sheet>
+        <event-sheet>UI.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="2" />
+        <global-instance type="Keyboard" uid="4" />
+        <global-instance type="Function" uid="7" />
+        <global-instance type="Gamepad" uid="8">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+        <global-instance type="Multiplayer" uid="9" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file-folder name="Sprites">
+            <file name="Quibly Stage 1 - 2048 (lighter).png" />
+        </file-folder>
+    </files-folder>
+</c2project>

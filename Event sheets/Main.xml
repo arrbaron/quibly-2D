@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Main</name>
+    <events>
+        <include>UI</include>
+        <include>Match</include>
+        <include>Shield</include>
+        <include>Bullet</include>
+        <include>Test</include>
+        <include>Quibly</include>
+    </events>
+</c2eventsheet>

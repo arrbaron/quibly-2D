@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Match</name>
+    <events>
+        <variable constant="0" name="StartingLives" sid="699376607681156" static="0" type="number">3</variable>
+        <variable constant="0" name="Timer" sid="980673310669713" static="0" type="number">180</variable>
+        <event-block sid="642113944425208">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="581471590578715" type="Killzone">
+                    <param id="0" name="Object">Quibly</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="806682358424500">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="875590259233900" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="259221439483650" type="Quibly">
+                            <param id="0" name="Instance variable">DeathTimer</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="821447994587062">
+            <conditions>
+                <condition id="-22" name="Else" sid="530809115742829" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="588943668294443" type="Quibly">
+                    <param id="0" name="Instance variable">DeathTimer</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" inactive="1" sid="269479293473922" title="Match End">
+            <sub-events>
+                <event-block sid="464983984717293">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="429644442802113" type="System">
+                            <param id="0" name="Variable">PlayersAlive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="286208522291744" type="GameOver">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="618554106996980" type="GameOver">
+                            <param id="0" name="Text">&quot;WINNER: PLAYER &quot; &amp; Quibly.PlayerNum</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="382100862713701" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="971450431586174" type="System" />
+                        <action id="-21" name="Reset global variables" sid="890414134980440" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

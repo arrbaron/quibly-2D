@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Bullet</name>
+    <events>
+        <event-group description="" sid="596679894791920" title="Collisions">
+            <sub-events>
+                <event-block sid="379059521510029">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="728377582416676" type="Bullet">
+                            <param id="0" name="Object">Quibly</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="982602158822857" type="Bullet">
+                            <param id="0" name="Instance variable">Owner</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">Quibly.PlayerNum</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="494373921824094" type="Quibly">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">Bullet.Damage</param>
+                        </action>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="717421806231798" type="Quibly">
+                            <param id="0" name="Impulse">Bullet.Force + (Quibly.Damage * Quibly.DamageMultiplier)</param>
+                            <param id="1" name="Angle">angle(Bullet.X, Bullet.Y, Quibly.X, Quibly.Y )</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="944761985349232" type="Healthbar">
+                            <param id="0" name="Height">Quibly.Damage / 2</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="768160214535647" type="Healthbar">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">0.5</param>
+                        </action>
+                        <action id="0" name="Call function" sid="498484005021219" type="Function">
+                            <param id="0" name="Name">&quot;ScreenShake&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="866084448468262" type="Bullet" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="858649308345888">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="627372465673097" type="Bullet">
+                    <param id="0" name="Object">Bullet</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="435838812733125" type="Bullet" />
+            </actions>
+        </event-block>
+        <event-block sid="247479824002385">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="361177597111649" type="Bullet">
+                    <param id="0" name="Object">Shield</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="115971205009921" type="Bullet">
+                    <param id="0" name="Object">Shield</param>
+                </action>
+                <action id="-10" name="Set value" sid="164768312164485" type="Bullet">
+                    <param id="0" name="Instance variable">Owner</param>
+                    <param id="1" name="Value">666</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

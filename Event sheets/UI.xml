@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>UI</name>
+    <events>
+        <variable constant="0" name="ShakeDuration" sid="630362124572175" static="0" type="number">0.1</variable>
+        <event-group description="" sid="591944919842623" title="HUD">
+            <sub-events>
+                <event-block sid="787423989228454">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="422495442771215" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="372029834463193">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="180804891687725" type="PlayerLives">
+                                    <param id="0" name="Instance variable">Player</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Quibly.PlayerNum</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="692605354504413" type="PlayerLives">
+                                    <param id="0" name="Text">Quibly.Lives &amp; &quot; LIVES&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="143735412461417" title="Screenshake">
+            <sub-events>
+                <event-block sid="777368184729525">
+                    <conditions>
+                        <condition id="0" name="On function" sid="814632815886548" type="Function">
+                            <param id="0" name="Name">&quot;ScreenShake&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-31" name="Set layout effect parameter" sid="917537783807352" type="System">
+                            <param id="0" name="Effect">&quot;WarpRadial&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">random(3, 7)</param>
+                        </action>
+                        <action id="-31" name="Set layout effect parameter" sid="732495280310557" type="System">
+                            <param id="0" name="Effect">&quot;WarpRadial&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">random(2, 4)</param>
+                        </action>
+                        <action id="-31" name="Set layout effect parameter" sid="921925557144559" type="System">
+                            <param id="0" name="Effect">&quot;WarpRadial&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">random(45, 55)</param>
+                        </action>
+                        <action id="-29" name="Set layout effect enabled" sid="245196933087199" type="System">
+                            <param id="0" name="Mode">1</param>
+                            <param id="1" name="Effect">&quot;WarpRadial&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="308193710874037" type="System">
+                            <param id="0" name="Seconds">ShakeDuration</param>
+                        </action>
+                        <action id="-29" name="Set layout effect enabled" sid="154405300231375" type="System">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;WarpRadial&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

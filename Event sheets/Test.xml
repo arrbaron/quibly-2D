@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Test</name>
+    <events>
+        <event-block disabled="1" sid="765802093875109">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="347679656636942" type="System">
+                    <param id="0" name="Interval (seconds)">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="530830730179032" type="System">
+                    <param id="0" name="Object to create">Bullet</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">400</param>
+                </action>
+                <action disabled="1" id="-8" name="Set angle" sid="876370572698472" type="Bullet">
+                    <param id="0" name="Angle">random(0, 360)</param>
+                </action>
+                <action id="-10" name="Set value" sid="357468900951825" type="Bullet">
+                    <param id="0" name="Instance variable">Owner</param>
+                    <param id="1" name="Value">9</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="312974357728728">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="480255511216492" type="System" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="0" name="Set text" sid="593446167874948" type="Debug">
+                    <param id="0" name="Text">&quot;X: &quot; &amp; round(Gamepad.Axis(0, 0)) &amp; &quot;Y: &quot; &amp; round(Gamepad.Axis(0, 1))</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
