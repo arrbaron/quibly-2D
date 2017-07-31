@@ -49,19 +49,40 @@
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="286208522291744" type="GameOver">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="0" name="Set text" sid="618554106996980" type="GameOver">
-                            <param id="0" name="Text">&quot;WINNER: PLAYER &quot; &amp; Quibly.PlayerNum</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="382100862713701" type="System">
-                            <param id="0" name="Seconds">3</param>
-                        </action>
-                        <action id="-26" name="Restart layout" sid="971450431586174" type="System" />
-                        <action id="-21" name="Reset global variables" sid="890414134980440" type="System" />
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="555396756912789">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="308771026240258" type="System">
+                                    <param id="0" name="Variable">PlayersConnected</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="286208522291744" type="GameOver">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="618554106996980" type="GameOver">
+                                    <param id="0" name="Text">&quot;WINNER: PLAYER &quot; &amp; Quibly.PlayerNum</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="382100862713701" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="-26" name="Restart layout" sid="971450431586174" type="System" />
+                                <action id="-21" name="Reset global variables" sid="890414134980440" type="System" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="725075023070343">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="316397514611274" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Restart layout" sid="989347769133167" type="System" />
+                                <action id="-21" name="Reset global variables" sid="210717762090125" type="System" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

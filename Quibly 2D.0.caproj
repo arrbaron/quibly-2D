@@ -101,10 +101,14 @@
                 <animation framecount="1" loop="0" name="P1" pingpong="0" repeatcount="1" repeatto="0" sid="742500635056406" speed="0">
                     <frame duration="1" hotspotX="0.509804" hotspotY="0.509804" original-source="C:\Users\The Annhilator\Downloads\20563020_10155496456737158_970157804_n (1).png">
                         <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
+                            <point x="0.176471" y="0.176471" />
+                            <point x="0.490196" y="0.0392157" />
+                            <point x="0.823529" y="0.176471" />
+                            <point x="0.882353" y="0.490196" />
+                            <point x="0.823529" y="0.823529" />
+                            <point x="0.490196" y="0.980392" />
+                            <point x="0.176471" y="0.823529" />
+                            <point x="0.0980392" y="0.490196" />
                         </collision-poly>
                     </frame>
                 </animation>
