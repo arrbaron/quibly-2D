@@ -82,8 +82,7 @@
                         <Inputs>0</Inputs>
                         <PlayerNum>0</PlayerNum>
                         <Multi_ID></Multi_ID>
-                        <MaxSpeed>5</MaxSpeed>
-                        <Acceleration>10</Acceleration>
+                        <Acceleration>12</Acceleration>
                         <Damage>0</Damage>
                         <DamageMultiplier>0.1</DamageMultiplier>
                         <MaxEnergy>100</MaxEnergy>
@@ -103,9 +102,9 @@
                                 <collision-mask>Use collision polygon</collision-mask>
                                 <prevent-rotation>Yes</prevent-rotation>
                                 <density>1</density>
-                                <friction>1</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0.5</linear-damping>
+                                <friction>0.1</friction>
+                                <elasticity>0.5</elasticity>
+                                <linear-damping>1</linear-damping>
                                 <angular-damping>0.01</angular-damping>
                                 <bullet>No</bullet>
                                 <initial-state>Enabled</initial-state>
@@ -396,8 +395,7 @@
                         <Inputs>0</Inputs>
                         <PlayerNum>0</PlayerNum>
                         <Multi_ID></Multi_ID>
-                        <MaxSpeed>5</MaxSpeed>
-                        <Acceleration>10</Acceleration>
+                        <Acceleration>12</Acceleration>
                         <Damage>0</Damage>
                         <DamageMultiplier>0.1</DamageMultiplier>
                         <MaxEnergy>100</MaxEnergy>
@@ -417,9 +415,9 @@
                                 <collision-mask>Use collision polygon</collision-mask>
                                 <prevent-rotation>Yes</prevent-rotation>
                                 <density>1</density>
-                                <friction>1</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0.5</linear-damping>
+                                <friction>0.1</friction>
+                                <elasticity>0.5</elasticity>
+                                <linear-damping>1</linear-damping>
                                 <angular-damping>0.01</angular-damping>
                                 <bullet>No</bullet>
                                 <initial-state>Enabled</initial-state>

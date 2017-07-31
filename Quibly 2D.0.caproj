@@ -64,7 +64,6 @@
                 <instance-variable name="Inputs" sid="522621527112278" type="number" />
                 <instance-variable name="PlayerNum" sid="460256209518136" type="number" />
                 <instance-variable name="Multi_ID" sid="112707249823179" type="string" />
-                <instance-variable name="MaxSpeed" sid="480476494188062" type="number" />
                 <instance-variable name="Acceleration" sid="862475656879745" type="number" />
                 <instance-variable name="Damage" sid="194339519179434" type="number" />
                 <instance-variable name="DamageMultiplier" sid="169084219321474" type="number" />
@@ -128,7 +127,10 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="315344319116494" speed="5">
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="315344319116494" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -190,7 +192,10 @@
                 <type>Healthbar</type>
             </container>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="853610511070271" speed="5">
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="853610511070271" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -336,6 +341,7 @@
         </file-folder>
         <file-folder name="Sprites">
             <file name="Quibly Stage 1 - 2048 (lighter).png" />
+            <file name="20563020_10155496456737158_970157804_n (1).png" />
         </file-folder>
     </files-folder>
 </c2project>

@@ -209,6 +209,9 @@
                                     <param id="0" name="Animation">&quot;P&quot; &amp; Quibly.PlayerNum</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="5" name="Set frame" sid="877100973414743" type="Shield">
+                                    <param id="0" name="Frame number">Quibly.PlayerNum - 1</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="743800004286366">
@@ -274,6 +277,9 @@
                                 <action id="4" name="Set animation" sid="282015224752805" type="Quibly">
                                     <param id="0" name="Animation">&quot;P&quot; &amp; Quibly.PlayerNum</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="185122495919607" type="Shield">
+                                    <param id="0" name="Frame number">Quibly.PlayerNum - 1</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -399,6 +405,9 @@
                                                     <param id="0" name="Object">Bullet</param>
                                                     <param id="1" name="Layer">0</param>
                                                     <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="726107097954972" type="Bullet">
+                                                    <param id="0" name="Frame number">Quibly.PlayerNum -1</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="585771619147869" type="Bullet">
                                                     <param id="0" name="Instance variable">Owner</param>
@@ -644,6 +653,9 @@
                                                     <param id="0" name="Object">Bullet</param>
                                                     <param id="1" name="Layer">0</param>
                                                     <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="334606033806216" type="Bullet">
+                                                    <param id="0" name="Frame number">Quibly.PlayerNum -1</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="771608761605714" type="Bullet">
                                                     <param id="0" name="Instance variable">Owner</param>
