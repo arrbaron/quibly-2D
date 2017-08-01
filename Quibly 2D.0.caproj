@@ -399,19 +399,14 @@
         <object-type name="Text" sid="191717669189011">
             <plugin id="Text" />
         </object-type>
-        <object-type name="PlayerMask" sid="158129110494615">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="720647580661608" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type global="1" name="ShootSounds" sid="431810144289466">
             <plugin id="Arr" />
         </object-type>
         <object-type name="Audio" sid="831023802425991">
             <plugin id="Audio" />
+        </object-type>
+        <object-type name="Mute" sid="553497341358718">
+            <plugin id="Button" />
         </object-type>
     </object-folder>
     <families />
@@ -428,6 +423,7 @@
         <event-sheet>Menu.xml</event-sheet>
         <event-sheet>Match.xml</event-sheet>
         <event-sheet>UI.xml</event-sheet>
+        <event-sheet>Audio.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="2" />
@@ -467,6 +463,8 @@
         <file name="Pew7.ogg" />
         <file name="Pew8.ogg" />
         <file name="Pew9.ogg" />
+        <file name="Boing.ogg" />
+        <file name="Ow.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>

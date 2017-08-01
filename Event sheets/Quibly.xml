@@ -29,66 +29,6 @@
                             <param id="0" name="Instance variable">Lives</param>
                             <param id="1" name="Value">StartingLives</param>
                         </action>
-                        <action id="3" name="Set at XY" sid="456348354074412" type="ShootSounds">
-                            <param id="0" name="X">0</param>
-                            <param id="1" name="Y">0</param>
-                            <param id="2" name="Value">&quot;Pew1&quot;</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="170189352163479" type="ShootSounds">
-                            <param id="0" name="X">0</param>
-                            <param id="1" name="Y">1</param>
-                            <param id="2" name="Value">&quot;Pew2&quot;</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="618212386487814" type="ShootSounds">
-                            <param id="0" name="X">0</param>
-                            <param id="1" name="Y">2</param>
-                            <param id="2" name="Value">&quot;Pew3&quot;</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="356638517928658" type="ShootSounds">
-                            <param id="0" name="X">1</param>
-                            <param id="1" name="Y">0</param>
-                            <param id="2" name="Value">&quot;Pew4&quot;</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="134118704841655" type="ShootSounds">
-                            <param id="0" name="X">1</param>
-                            <param id="1" name="Y">1</param>
-                            <param id="2" name="Value">&quot;Pew5&quot;</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="156492547894135" type="ShootSounds">
-                            <param id="0" name="X">1</param>
-                            <param id="1" name="Y">2</param>
-                            <param id="2" name="Value">&quot;Pew6&quot;</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="254069768002510" type="ShootSounds">
-                            <param id="0" name="X">2</param>
-                            <param id="1" name="Y">0</param>
-                            <param id="2" name="Value">&quot;Pew7&quot;</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="126651254149779" type="ShootSounds">
-                            <param id="0" name="X">2</param>
-                            <param id="1" name="Y">1</param>
-                            <param id="2" name="Value">&quot;Pew8&quot;</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="557116144670732" type="ShootSounds">
-                            <param id="0" name="X">2</param>
-                            <param id="1" name="Y">2</param>
-                            <param id="2" name="Value">&quot;Pew9&quot;</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="895659048145695" type="ShootSounds">
-                            <param id="0" name="X">3</param>
-                            <param id="1" name="Y">0</param>
-                            <param id="2" name="Value">&quot;Pew10&quot;</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="959173605779628" type="ShootSounds">
-                            <param id="0" name="X">3</param>
-                            <param id="1" name="Y">1</param>
-                            <param id="2" name="Value">&quot;Pew11&quot;</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="562408532050129" type="ShootSounds">
-                            <param id="0" name="X">3</param>
-                            <param id="1" name="Y">2</param>
-                            <param id="2" name="Value">&quot;Pew12&quot;</param>
-                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="925908472852166">
@@ -3001,7 +2941,7 @@
                     <actions>
                         <action id="7" name="Play (by name)" sid="997349474701615" type="Audio">
                             <param id="0" name="Folder">0</param>
-                            <param id="1" name="Audio file name">ShootSounds.At(Function.Param(1) - 1, floor(random(0, 4)))</param>
+                            <param id="1" name="Audio file name">ShootSounds.At(Function.Param(1) - 1, floor(random(0, 3)))</param>
                             <param id="3" name="Loop">0</param>
                             <param id="4" name="Volume">0</param>
                             <param id="2" name="Tag (optional)">&quot;&quot;</param>

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Audio</name>
+    <events>
+        <event-block sid="836532041066026">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="633644233189349" type="System" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set at XY" sid="301161707793559" type="ShootSounds">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">&quot;Pew1&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="748408674487958" type="ShootSounds">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">&quot;Pew2&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="127749968027140" type="ShootSounds">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">2</param>
+                    <param id="2" name="Value">&quot;Pew3&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="802427900987138" type="ShootSounds">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">&quot;Pew4&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="559653837520363" type="ShootSounds">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">&quot;Pew5&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="531614918603934" type="ShootSounds">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">2</param>
+                    <param id="2" name="Value">&quot;Pew6&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="324874570053716" type="ShootSounds">
+                    <param id="0" name="X">2</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">&quot;Pew7&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="860367757404159" type="ShootSounds">
+                    <param id="0" name="X">2</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">&quot;Pew8&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="307830692179062" type="ShootSounds">
+                    <param id="0" name="X">2</param>
+                    <param id="1" name="Y">2</param>
+                    <param id="2" name="Value">&quot;Pew9&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="794448762633754" type="ShootSounds">
+                    <param id="0" name="X">3</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">&quot;Pew10&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="395576313532509" type="ShootSounds">
+                    <param id="0" name="X">3</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">&quot;Pew11&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="983396368094809" type="ShootSounds">
+                    <param id="0" name="X">3</param>
+                    <param id="1" name="Y">2</param>
+                    <param id="2" name="Value">&quot;Pew12&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="685734331241504">
+            <conditions>
+                <condition id="0" name="On clicked" sid="664393191634610" type="Mute" />
+            </conditions>
+            <actions>
+                <action id="8" name="Set silent" sid="412490815856136" type="Audio">
+                    <param id="0" name="Mode">2</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
