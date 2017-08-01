@@ -17,11 +17,12 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" sid="427635811585929" type="Audio">
-                            <param id="0" name="Audio file">Ow</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        <action id="7" name="Play (by name)" sid="427635811585929" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">&quot;P&quot; &amp; Quibly.PlayerNum &amp; &quot;_Hit&quot;</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-11" name="Add to" sid="494373921824094" type="Quibly">
                             <param id="0" name="Instance variable">Damage</param>

@@ -451,18 +451,38 @@
         </global-instance>
     </global-instances>
     <sounds-folder>
-        <file name="Pew1.ogg" />
-        <file name="Pew10.ogg" />
-        <file name="Pew11.ogg" />
-        <file name="Pew12.ogg" />
-        <file name="Pew2.ogg" />
-        <file name="Pew3.ogg" />
-        <file name="Pew4.ogg" />
-        <file name="Pew5.ogg" />
-        <file name="Pew6.ogg" />
-        <file name="Pew7.ogg" />
-        <file name="Pew8.ogg" />
-        <file name="Pew9.ogg" />
+        <sound-folder name="Shoot">
+            <sound-folder name="P1">
+                <file name="P1_Pew1.m4a" />
+                <file name="P1_Pew1.ogg" />
+                <file name="P1_Pew2.m4a" />
+                <file name="P1_Pew2.ogg" />
+                <file name="P1_Pew3.m4a" />
+                <file name="P1_Pew3.ogg" />
+            </sound-folder>
+            <sound-folder name="P2">
+                <file name="P2_Pew1.m4a" />
+                <file name="P2_Pew1.ogg" />
+                <file name="P2_Pew2.m4a" />
+                <file name="P2_Pew2.ogg" />
+                <file name="P2_Pew3.m4a" />
+                <file name="P2_Pew3.ogg" />
+            </sound-folder>
+            <sound-folder name="P3" />
+            <sound-folder name="P4" />
+        </sound-folder>
+        <sound-folder name="Hit">
+            <sound-folder name="P1">
+                <file name="P1_Hit.m4a" />
+                <file name="P1_Hit.ogg" />
+            </sound-folder>
+            <sound-folder name="P2">
+                <file name="P2_Hit.m4a" />
+                <file name="P2_Hit.ogg" />
+            </sound-folder>
+            <sound-folder name="P3" />
+            <sound-folder name="P4" />
+        </sound-folder>
         <file name="Boing.ogg" />
         <file name="Ow.ogg" />
     </sounds-folder>
