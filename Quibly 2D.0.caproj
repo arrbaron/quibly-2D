@@ -10,6 +10,8 @@
     <unique-id>1xqx8c09baibh</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -101,14 +103,10 @@
                 <animation framecount="1" loop="0" name="P1" pingpong="0" repeatcount="1" repeatto="0" sid="742500635056406" speed="0">
                     <frame duration="1" hotspotX="0.509804" hotspotY="0.509804" original-source="C:\Users\The Annhilator\Downloads\20563020_10155496456737158_970157804_n (1).png">
                         <collision-poly>
-                            <point x="0.176471" y="0.176471" />
-                            <point x="0.490196" y="0.0392157" />
-                            <point x="0.823529" y="0.176471" />
-                            <point x="0.882353" y="0.490196" />
-                            <point x="0.823529" y="0.823529" />
-                            <point x="0.490196" y="0.980392" />
-                            <point x="0.176471" y="0.823529" />
-                            <point x="0.0980392" y="0.490196" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -409,6 +407,12 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type global="1" name="ShootSounds" sid="431810144289466">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="Audio" sid="831023802425991">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -435,8 +439,35 @@
             </properties>
         </global-instance>
         <global-instance type="Multiplayer" uid="9" />
+        <global-instance type="Audio" uid="28">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="Pew1.ogg" />
+        <file name="Pew10.ogg" />
+        <file name="Pew11.ogg" />
+        <file name="Pew12.ogg" />
+        <file name="Pew2.ogg" />
+        <file name="Pew3.ogg" />
+        <file name="Pew4.ogg" />
+        <file name="Pew5.ogg" />
+        <file name="Pew6.ogg" />
+        <file name="Pew7.ogg" />
+        <file name="Pew8.ogg" />
+        <file name="Pew9.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">

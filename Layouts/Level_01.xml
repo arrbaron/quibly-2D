@@ -82,7 +82,7 @@
                         <Inputs>0</Inputs>
                         <PlayerNum>0</PlayerNum>
                         <Multi_ID></Multi_ID>
-                        <Acceleration>7</Acceleration>
+                        <Acceleration>10</Acceleration>
                         <Damage>0</Damage>
                         <DamageMultiplier>0.1</DamageMultiplier>
                         <MaxEnergy>100</MaxEnergy>
@@ -183,7 +183,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <RecoilForce>3</RecoilForce>
+                        <RecoilForce>4</RecoilForce>
                         <FireCooldown>0.33</FireCooldown>
                         <CanFire>true</CanFire>
                     </instance-variables>
@@ -397,7 +397,7 @@
                         <Inputs>0</Inputs>
                         <PlayerNum>0</PlayerNum>
                         <Multi_ID></Multi_ID>
-                        <Acceleration>7</Acceleration>
+                        <Acceleration>10</Acceleration>
                         <Damage>0</Damage>
                         <DamageMultiplier>0.1</DamageMultiplier>
                         <MaxEnergy>100</MaxEnergy>
@@ -667,7 +667,15 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="ShootSounds" uid="27">
+            <properties>
+                <width>4</width>
+                <height>3</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+    </nonworld-instances>
     <effects>
         <effect-type name="WarpRadial">
             <effect id="warpradial" />
