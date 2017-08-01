@@ -17,6 +17,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="427635811585929" type="Audio">
+                            <param id="0" name="Audio file">Ow</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="-11" name="Add to" sid="494373921824094" type="Quibly">
                             <param id="0" name="Instance variable">Damage</param>
                             <param id="1" name="Value">Bullet.Damage</param>
@@ -60,6 +66,12 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Play" sid="726175390593572" type="Audio">
+                    <param id="0" name="Audio file">Boing</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action behavior="Bullet" id="4" name="Bounce off object" sid="115971205009921" type="Bullet">
                     <param id="0" name="Object">Shield</param>
                 </action>

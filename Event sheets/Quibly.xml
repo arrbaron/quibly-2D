@@ -477,37 +477,9 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Spawn another object" sid="937846402065950" type="Head">
-                                                    <param id="0" name="Object">Bullet</param>
-                                                    <param id="1" name="Layer">0</param>
-                                                    <param id="2" name="Image point">1</param>
-                                                </action>
-                                                <action id="5" name="Set frame" sid="726107097954972" type="Bullet">
-                                                    <param id="0" name="Frame number">Quibly.PlayerNum -1</param>
-                                                </action>
-                                                <action id="-10" name="Set value" sid="585771619147869" type="Bullet">
-                                                    <param id="0" name="Instance variable">Owner</param>
-                                                    <param id="1" name="Value">Quibly.PlayerNum</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="712772961411276" type="Quibly">
-                                                    <param id="0" name="Instance variable">IsShooting</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="542267676936357" type="Quibly">
-                                                    <param id="0" name="Impulse">Head.RecoilForce</param>
-                                                    <param id="1" name="Angle">angle(Quibly.X  * -1, Quibly.Y  * -1, Mouse.X  * -1, Mouse.Y  * -1)</param>
-                                                    <param id="2" name="Image point">0</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="532169700453538" type="Head">
-                                                    <param id="0" name="Instance variable">CanFire</param>
-                                                    <param id="1" name="Value">0</param>
-                                                </action>
-                                                <action id="-16" name="Wait" sid="685141689771873" type="System">
-                                                    <param id="0" name="Seconds">Head.FireCooldown</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="377754443217563" type="Head">
-                                                    <param id="0" name="Instance variable">CanFire</param>
-                                                    <param id="1" name="Value">1</param>
+                                                <action id="0" name="Call function" sid="887571545287807" type="Function">
+                                                    <param id="0" name="Name">&quot;Fire&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Quibly.UID{###}Quibly.PlayerNum</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -725,37 +697,9 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Spawn another object" sid="535118991841365" type="Head">
-                                                    <param id="0" name="Object">Bullet</param>
-                                                    <param id="1" name="Layer">0</param>
-                                                    <param id="2" name="Image point">1</param>
-                                                </action>
-                                                <action id="5" name="Set frame" sid="334606033806216" type="Bullet">
-                                                    <param id="0" name="Frame number">Quibly.PlayerNum -1</param>
-                                                </action>
-                                                <action id="-10" name="Set value" sid="771608761605714" type="Bullet">
-                                                    <param id="0" name="Instance variable">Owner</param>
-                                                    <param id="1" name="Value">Quibly.PlayerNum</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="172572669973445" type="Quibly">
-                                                    <param id="0" name="Instance variable">IsShooting</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="912522632540734" type="Quibly">
-                                                    <param id="0" name="Impulse">Head.RecoilForce</param>
-                                                    <param id="1" name="Angle">angle(Quibly.X  * -1, Quibly.Y  * -1, Reticle.X  * -1, Reticle.Y  * -1)</param>
-                                                    <param id="2" name="Image point">0</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="192506042125465" type="Head">
-                                                    <param id="0" name="Instance variable">CanFire</param>
-                                                    <param id="1" name="Value">0</param>
-                                                </action>
-                                                <action id="-16" name="Wait" sid="427337397176215" type="System">
-                                                    <param id="0" name="Seconds">Head.FireCooldown</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="134748783341812" type="Head">
-                                                    <param id="0" name="Instance variable">CanFire</param>
-                                                    <param id="1" name="Value">1</param>
+                                                <action id="0" name="Call function" sid="790128925140238" type="Function">
+                                                    <param id="0" name="Name">&quot;Fire&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Quibly.UID{###}Quibly.PlayerNum</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -975,34 +919,9 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Spawn another object" sid="425871509065977" type="Head">
-                                                    <param id="0" name="Object">Bullet</param>
-                                                    <param id="1" name="Layer">0</param>
-                                                    <param id="2" name="Image point">1</param>
-                                                </action>
-                                                <action id="-10" name="Set value" sid="918945441044295" type="Bullet">
-                                                    <param id="0" name="Instance variable">Owner</param>
-                                                    <param id="1" name="Value">Quibly.PlayerNum</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="553499774810148" type="Quibly">
-                                                    <param id="0" name="Instance variable">IsShooting</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="526951477396336" type="Quibly">
-                                                    <param id="0" name="Impulse">Head.RecoilForce</param>
-                                                    <param id="1" name="Angle">angle(Quibly.X  * -1, Quibly.Y  * -1, Reticle.X  * -1, Reticle.Y  * -1)</param>
-                                                    <param id="2" name="Image point">0</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="727413640758811" type="Head">
-                                                    <param id="0" name="Instance variable">CanFire</param>
-                                                    <param id="1" name="Value">0</param>
-                                                </action>
-                                                <action id="-16" name="Wait" sid="467145686417655" type="System">
-                                                    <param id="0" name="Seconds">Head.FireCooldown</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="660756571172498" type="Head">
-                                                    <param id="0" name="Instance variable">CanFire</param>
-                                                    <param id="1" name="Value">1</param>
+                                                <action id="0" name="Call function" sid="166098636082675" type="Function">
+                                                    <param id="0" name="Name">&quot;Fire&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Quibly.UID{###}Quibly.PlayerNum</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1222,34 +1141,9 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Spawn another object" sid="272364589364782" type="Head">
-                                                    <param id="0" name="Object">Bullet</param>
-                                                    <param id="1" name="Layer">0</param>
-                                                    <param id="2" name="Image point">1</param>
-                                                </action>
-                                                <action id="-10" name="Set value" sid="731816315152141" type="Bullet">
-                                                    <param id="0" name="Instance variable">Owner</param>
-                                                    <param id="1" name="Value">Quibly.PlayerNum</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="187263625844450" type="Quibly">
-                                                    <param id="0" name="Instance variable">IsShooting</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="929633974307417" type="Quibly">
-                                                    <param id="0" name="Impulse">Head.RecoilForce</param>
-                                                    <param id="1" name="Angle">angle(Quibly.X  * -1, Quibly.Y  * -1, Reticle.X  * -1, Reticle.Y  * -1)</param>
-                                                    <param id="2" name="Image point">0</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="152182434627576" type="Head">
-                                                    <param id="0" name="Instance variable">CanFire</param>
-                                                    <param id="1" name="Value">0</param>
-                                                </action>
-                                                <action id="-16" name="Wait" sid="776707646450127" type="System">
-                                                    <param id="0" name="Seconds">Head.FireCooldown</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="875380317955216" type="Head">
-                                                    <param id="0" name="Instance variable">CanFire</param>
-                                                    <param id="1" name="Value">1</param>
+                                                <action id="0" name="Call function" sid="791953222960108" type="Function">
+                                                    <param id="0" name="Name">&quot;Fire&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Quibly.UID{###}Quibly.PlayerNum</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -3031,6 +2925,118 @@
                                     <param id="0" name="Height">0</param>
                                 </action>
                             </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="906350595216649" title="Fire">
+            <sub-events>
+                <event-block sid="602527724922699">
+                    <conditions>
+                        <condition id="0" name="On function" sid="786818388244445" type="Function">
+                            <param id="0" name="Name">&quot;Fire&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Play (by name)" sid="997349474701615" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">ShootSounds.At(Function.Param(1) - 1, floor(random(0, 3)))</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="972721288385609">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="812935906208588" type="Quibly">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="631005210650277">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="256405304233731" type="Quibly">
+                                            <param id="0" name="Instance variable">ControllerPlayer</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="731794033735305" type="Head">
+                                            <param id="0" name="Object">Bullet</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="114862505637065" type="Bullet">
+                                            <param id="0" name="Frame number">Quibly.PlayerNum -1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="624437805501762" type="Bullet">
+                                            <param id="0" name="Instance variable">Owner</param>
+                                            <param id="1" name="Value">Quibly.PlayerNum</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="506364416443347" type="Quibly">
+                                            <param id="0" name="Instance variable">IsShooting</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="573299255893799" type="Quibly">
+                                            <param id="0" name="Impulse">Head.RecoilForce</param>
+                                            <param id="1" name="Angle">angle(Quibly.X  * -1, Quibly.Y  * -1, Reticle.X  * -1, Reticle.Y  * -1)</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="673804872834387" type="Head">
+                                            <param id="0" name="Instance variable">CanFire</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="733175099263121" type="System">
+                                            <param id="0" name="Seconds">Head.FireCooldown</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="423951679176132" type="Head">
+                                            <param id="0" name="Instance variable">CanFire</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="379733368566132">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="731347732982732" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="262787740300630" type="Head">
+                                            <param id="0" name="Object">Bullet</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="722243463755555" type="Bullet">
+                                            <param id="0" name="Frame number">Quibly.PlayerNum -1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="958774982811603" type="Bullet">
+                                            <param id="0" name="Instance variable">Owner</param>
+                                            <param id="1" name="Value">Quibly.PlayerNum</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="701736319582436" type="Quibly">
+                                            <param id="0" name="Instance variable">IsShooting</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="488354178287451" type="Quibly">
+                                            <param id="0" name="Impulse">Head.RecoilForce</param>
+                                            <param id="1" name="Angle">angle(Quibly.X  * -1, Quibly.Y  * -1, Mouse.X  * -1, Mouse.Y  * -1)</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="132700908166426" type="Head">
+                                            <param id="0" name="Instance variable">CanFire</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="991235373757081" type="System">
+                                            <param id="0" name="Seconds">Head.FireCooldown</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="846640117029637" type="Head">
+                                            <param id="0" name="Instance variable">CanFire</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

@@ -82,7 +82,7 @@
                         <Inputs>0</Inputs>
                         <PlayerNum>0</PlayerNum>
                         <Multi_ID></Multi_ID>
-                        <Acceleration>7</Acceleration>
+                        <Acceleration>10</Acceleration>
                         <Damage>0</Damage>
                         <DamageMultiplier>0.1</DamageMultiplier>
                         <MaxEnergy>100</MaxEnergy>
@@ -183,7 +183,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <RecoilForce>3</RecoilForce>
+                        <RecoilForce>4</RecoilForce>
                         <FireCooldown>0.33</FireCooldown>
                         <CanFire>true</CanFire>
                     </instance-variables>
@@ -397,7 +397,7 @@
                         <Inputs>0</Inputs>
                         <PlayerNum>0</PlayerNum>
                         <Multi_ID></Multi_ID>
-                        <Acceleration>7</Acceleration>
+                        <Acceleration>10</Acceleration>
                         <Damage>0</Damage>
                         <DamageMultiplier>0.1</DamageMultiplier>
                         <MaxEnergy>100</MaxEnergy>
@@ -641,33 +641,43 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PlayerMask" uid="26">
+                <instance type="Mute" uid="29">
                     <properties>
+                        <type>Button</type>
+                        <text>Mute</text>
+                        <tooltip></tooltip>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <enabled>Yes</enabled>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                        <checked>No</checked>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-160</x>
-                        <y>192</y>
+                        <x>1088</x>
+                        <y>32</y>
                         <z>0</z>
-                        <width>80</width>
-                        <height>80</height>
+                        <width>72</width>
+                        <height>24</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                     </world>
                 </instance>
             </instances>
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="ShootSounds" uid="27">
+            <properties>
+                <width>4</width>
+                <height>3</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+    </nonworld-instances>
     <effects>
         <effect-type name="WarpRadial">
             <effect id="warpradial" />
