@@ -80,6 +80,10 @@
                 <instance-variable name="Lives" sid="580799548207029" type="number" />
                 <instance-variable name="RotationSpeed" sid="711762171897291" type="number" />
                 <instance-variable name="ControllerPlayer" sid="892220948446767" type="boolean" />
+                <instance-variable name="Scale" sid="717749746228747" type="number" />
+                <instance-variable name="Active" sid="118555139564217" type="boolean" />
+                <instance-variable name="MaxDeathTime" sid="581674182618457" type="number" />
+                <instance-variable name="IsFalling" sid="245456573696626" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Physics" sid="181614599941760">
@@ -100,43 +104,59 @@
                 <type>Healthbar</type>
             </container>
             <animation-folder>
-                <animation framecount="1" loop="0" name="P1" pingpong="0" repeatcount="1" repeatto="0" sid="742500635056406" speed="0">
+                <animation framecount="1" loop="0" name="P1" pingpong="0" repeatcount="1" repeatto="0" sid="742500635056406" speed="30">
                     <frame duration="1" hotspotX="0.509804" hotspotY="0.509804" original-source="C:\Users\The Annhilator\Downloads\20563020_10155496456737158_970157804_n (1).png">
                         <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
+                            <point x="0.176471" y="0.176471" />
+                            <point x="0.490196" y="0.0392157" />
+                            <point x="0.823529" y="0.176471" />
+                            <point x="0.882353" y="0.490196" />
+                            <point x="0.823529" y="0.823529" />
+                            <point x="0.490196" y="0.980392" />
+                            <point x="0.176471" y="0.823529" />
+                            <point x="0.0980392" y="0.490196" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="P2" pingpong="0" repeatcount="1" repeatto="0" sid="868938398786253" speed="0">
                     <frame duration="1" hotspotX="0.509804" hotspotY="0.509804">
                         <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
+                            <point x="0.176471" y="0.176471" />
+                            <point x="0.490196" y="0.0392157" />
+                            <point x="0.823529" y="0.176471" />
+                            <point x="0.882353" y="0.490196" />
+                            <point x="0.823529" y="0.823529" />
+                            <point x="0.490196" y="0.980392" />
+                            <point x="0.176471" y="0.823529" />
+                            <point x="0.0980392" y="0.490196" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="P3" pingpong="0" repeatcount="1" repeatto="0" sid="584399414843684" speed="0">
                     <frame duration="1" hotspotX="0.509804" hotspotY="0.509804">
                         <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
+                            <point x="0.176471" y="0.176471" />
+                            <point x="0.490196" y="0.0392157" />
+                            <point x="0.823529" y="0.176471" />
+                            <point x="0.882353" y="0.490196" />
+                            <point x="0.823529" y="0.823529" />
+                            <point x="0.490196" y="0.980392" />
+                            <point x="0.176471" y="0.823529" />
+                            <point x="0.0980392" y="0.490196" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="P4" pingpong="0" repeatcount="1" repeatto="0" sid="885621624005073" speed="0">
                     <frame duration="1" hotspotX="0.509804" hotspotY="0.509804">
                         <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
+                            <point x="0.176471" y="0.176471" />
+                            <point x="0.490196" y="0.0392157" />
+                            <point x="0.823529" y="0.176471" />
+                            <point x="0.882353" y="0.490196" />
+                            <point x="0.823529" y="0.823529" />
+                            <point x="0.490196" y="0.980392" />
+                            <point x="0.176471" y="0.823529" />
+                            <point x="0.0980392" y="0.490196" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -334,9 +354,6 @@
         <object-type name="Local" sid="105377318743385">
             <plugin id="Button" />
         </object-type>
-        <object-type name="Multi" sid="114433373762392">
-            <plugin id="Button" />
-        </object-type>
         <object-type name="BG" sid="372566314068111">
             <plugin id="Sprite" />
             <animation-folder>
@@ -407,6 +424,14 @@
         </object-type>
         <object-type name="Mute" sid="553497341358718">
             <plugin id="Button" />
+        </object-type>
+        <object-type name="SafeZone" sid="476836868253053">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="429589419561201" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

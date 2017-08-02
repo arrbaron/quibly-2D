@@ -112,7 +112,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="154762261500810" title="Update">
+        <event-group description="" sid="154762261500810" title="Quibly Rotation">
             <sub-events>
                 <event-block sid="568909698950237">
                     <conditions>
@@ -259,7 +259,7 @@
                                 </action>
                                 <action id="-3" name="Create object" sid="356669891122636" type="System">
                                     <param id="0" name="Object to create">Quibly</param>
-                                    <param id="1" name="Layer">0</param>
+                                    <param id="1" name="Layer">1</param>
                                     <param id="2" name="X">random(100, 1000)</param>
                                     <param id="3" name="Y">random(100, 700)</param>
                                 </action>
@@ -331,7 +331,7 @@
                                 </action>
                                 <action id="-3" name="Create object" sid="445181700328153" type="System">
                                     <param id="0" name="Object to create">Quibly</param>
-                                    <param id="1" name="Layer">0</param>
+                                    <param id="1" name="Layer">1</param>
                                     <param id="2" name="X">random(100, 1000)</param>
                                     <param id="3" name="Y">random(100, 700)</param>
                                 </action>
@@ -409,10 +409,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="881894553997116" type="Quibly">
-                                            <param id="0" name="Force">Quibly.Acceleration</param>
-                                            <param id="1" name="Angle">-90</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="0" name="Call function" sid="283312320298176" type="Function">
+                                            <param id="0" name="Name">&quot;MoveUp&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -423,10 +422,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="835668900151940" type="Quibly">
-                                            <param id="0" name="Force">Quibly.Acceleration</param>
-                                            <param id="1" name="Angle">180</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="0" name="Call function" sid="888761131283978" type="Function">
+                                            <param id="0" name="Name">&quot;MoveLeft&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -437,10 +435,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="165943738829744" type="Quibly">
-                                            <param id="0" name="Force">Quibly.Acceleration</param>
-                                            <param id="1" name="Angle">90</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="0" name="Call function" sid="629836857409725" type="Function">
+                                            <param id="0" name="Name">&quot;MoveDown&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -451,10 +448,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="331572378609852" type="Quibly">
-                                            <param id="0" name="Force">Quibly.Acceleration</param>
-                                            <param id="1" name="Angle">0</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="0" name="Call function" sid="105738979533188" type="Function">
+                                            <param id="0" name="Name">&quot;MoveRight&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -492,9 +488,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="521205905508581" type="Quibly">
-                                            <param id="0" name="Instance variable">IsShooting</param>
-                                            <param id="1" name="Value">0</param>
+                                        <action id="0" name="Call function" sid="152956551916533" type="Function">
+                                            <param id="0" name="Name">&quot;FireStop&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -507,15 +503,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="612844412718787" type="Quibly">
-                                            <param id="0" name="Instance variable">IsShielding</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="778978063770419" type="Shield">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="11" name="Set collisions enabled" sid="882901805246948" type="Shield">
-                                            <param id="0" name="Collisions">1</param>
+                                        <action id="0" name="Call function" sid="851929670708688" type="Function">
+                                            <param id="0" name="Name">&quot;ShieldOn&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -526,29 +516,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="624384760405912" type="Quibly">
-                                            <param id="0" name="Instance variable">IsShielding</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="555890863372308" type="Shield">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="11" name="Set collisions enabled" sid="473587740013780" type="Shield">
-                                            <param id="0" name="Collisions">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="679852654295693">
-                                    <conditions>
-                                        <condition id="-1" name="Every tick" sid="175303846205355" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-22" name="Set angle toward position" sid="157362169376188" type="Shield">
-                                            <param id="0" name="X">Mouse.X</param>
-                                            <param id="1" name="Y">Mouse.Y</param>
-                                        </action>
-                                        <action id="-16" name="Set opacity" sid="803797555845785" type="Shield">
-                                            <param id="0" name="Opacity">Quibly.Energy</param>
+                                        <action id="0" name="Call function" sid="161996730184234" type="Function">
+                                            <param id="0" name="Name">&quot;ShieldOff&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -619,10 +589,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="162922779448970" type="Quibly">
-                                            <param id="0" name="Force">Quibly.Acceleration</param>
-                                            <param id="1" name="Angle">-90</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="0" name="Call function" sid="387774466038287" type="Function">
+                                            <param id="0" name="Name">&quot;MoveUp&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -636,10 +605,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="424831612336100" type="Quibly">
-                                            <param id="0" name="Force">Quibly.Acceleration</param>
-                                            <param id="1" name="Angle">180</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="0" name="Call function" sid="909267431597789" type="Function">
+                                            <param id="0" name="Name">&quot;MoveLeft&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -653,10 +621,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="944789888228841" type="Quibly">
-                                            <param id="0" name="Force">Quibly.Acceleration</param>
-                                            <param id="1" name="Angle">90</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="0" name="Call function" sid="702326941248524" type="Function">
+                                            <param id="0" name="Name">&quot;MoveDown&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -670,10 +637,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="305008195579312" type="Quibly">
-                                            <param id="0" name="Force">Quibly.Acceleration</param>
-                                            <param id="1" name="Angle">0</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="0" name="Call function" sid="317536074030350" type="Function">
+                                            <param id="0" name="Name">&quot;MoveRight&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -709,13 +675,13 @@
                                     <conditions>
                                         <condition id="7" name="On button released" sid="485383580497086" type="Gamepad">
                                             <param id="0" name="Gamepad">0</param>
-                                            <param id="1" name="Button">0</param>
+                                            <param id="1" name="Button">7</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="690181190488325" type="Quibly">
-                                            <param id="0" name="Instance variable">IsShooting</param>
-                                            <param id="1" name="Value">0</param>
+                                        <action id="0" name="Call function" sid="130688404714055" type="Function">
+                                            <param id="0" name="Name">&quot;FireStop&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -728,15 +694,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="772692508919117" type="Quibly">
-                                            <param id="0" name="Instance variable">IsShielding</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="543135701137575" type="Shield">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="11" name="Set collisions enabled" sid="355295192245679" type="Shield">
-                                            <param id="0" name="Collisions">1</param>
+                                        <action id="0" name="Call function" sid="168261200917522" type="Function">
+                                            <param id="0" name="Name">&quot;ShieldOn&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -748,29 +708,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="463910380388425" type="Quibly">
-                                            <param id="0" name="Instance variable">IsShielding</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="410033718434512" type="Shield">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="11" name="Set collisions enabled" sid="110071787501626" type="Shield">
-                                            <param id="0" name="Collisions">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="956316296822705">
-                                    <conditions>
-                                        <condition id="-1" name="Every tick" sid="706703411417545" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-22" name="Set angle toward position" sid="118791772322175" type="Shield">
-                                            <param id="0" name="X">Reticle.X</param>
-                                            <param id="1" name="Y">Reticle.Y</param>
-                                        </action>
-                                        <action id="-16" name="Set opacity" sid="396506764131794" type="Shield">
-                                            <param id="0" name="Opacity">Quibly.Energy</param>
+                                        <action id="0" name="Call function" sid="431531177665431" type="Function">
+                                            <param id="0" name="Name">&quot;ShieldOff&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -841,10 +781,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="657437944771703" type="Quibly">
-                                            <param id="0" name="Force">Quibly.Acceleration</param>
-                                            <param id="1" name="Angle">-90</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="0" name="Call function" sid="602512140655867" type="Function">
+                                            <param id="0" name="Name">&quot;MoveUp&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -858,10 +797,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="201787397390714" type="Quibly">
-                                            <param id="0" name="Force">Quibly.Acceleration</param>
-                                            <param id="1" name="Angle">180</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="0" name="Call function" sid="571216070487124" type="Function">
+                                            <param id="0" name="Name">&quot;MoveLeft&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -875,10 +813,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="182599860191864" type="Quibly">
-                                            <param id="0" name="Force">Quibly.Acceleration</param>
-                                            <param id="1" name="Angle">90</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="0" name="Call function" sid="109083666732218" type="Function">
+                                            <param id="0" name="Name">&quot;MoveDown&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -892,10 +829,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="560203037459230" type="Quibly">
-                                            <param id="0" name="Force">Quibly.Acceleration</param>
-                                            <param id="1" name="Angle">0</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="0" name="Call function" sid="368873877470364" type="Function">
+                                            <param id="0" name="Name">&quot;MoveRight&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -931,13 +867,13 @@
                                     <conditions>
                                         <condition id="7" name="On button released" sid="908320670826917" type="Gamepad">
                                             <param id="0" name="Gamepad">1</param>
-                                            <param id="1" name="Button">0</param>
+                                            <param id="1" name="Button">7</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="177535737264531" type="Quibly">
-                                            <param id="0" name="Instance variable">IsShooting</param>
-                                            <param id="1" name="Value">0</param>
+                                        <action id="0" name="Call function" sid="839790600528917" type="Function">
+                                            <param id="0" name="Name">&quot;FireStop&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -950,15 +886,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="694799962909691" type="Quibly">
-                                            <param id="0" name="Instance variable">IsShielding</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="791757738541222" type="Shield">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="11" name="Set collisions enabled" sid="142976950732408" type="Shield">
-                                            <param id="0" name="Collisions">1</param>
+                                        <action id="0" name="Call function" sid="389125110444389" type="Function">
+                                            <param id="0" name="Name">&quot;ShieldOn&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -970,29 +900,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="690509616917785" type="Quibly">
-                                            <param id="0" name="Instance variable">IsShielding</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="632679327163889" type="Shield">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="11" name="Set collisions enabled" sid="343973799055996" type="Shield">
-                                            <param id="0" name="Collisions">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="636496094342818">
-                                    <conditions>
-                                        <condition id="-1" name="Every tick" sid="716937754600262" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-22" name="Set angle toward position" sid="782241907417450" type="Shield">
-                                            <param id="0" name="X">Reticle.X</param>
-                                            <param id="1" name="Y">Reticle.Y</param>
-                                        </action>
-                                        <action id="-16" name="Set opacity" sid="949455367877513" type="Shield">
-                                            <param id="0" name="Opacity">Quibly.Energy</param>
+                                        <action id="0" name="Call function" sid="236670411169521" type="Function">
+                                            <param id="0" name="Name">&quot;ShieldOff&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1063,10 +973,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="686736151002261" type="Quibly">
-                                            <param id="0" name="Force">Quibly.Acceleration</param>
-                                            <param id="1" name="Angle">-90</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="0" name="Call function" sid="215456206706225" type="Function">
+                                            <param id="0" name="Name">&quot;MoveUp&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1080,10 +989,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="968514854547644" type="Quibly">
-                                            <param id="0" name="Force">Quibly.Acceleration</param>
-                                            <param id="1" name="Angle">180</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="0" name="Call function" sid="816430655193943" type="Function">
+                                            <param id="0" name="Name">&quot;MoveLeft&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1097,10 +1005,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="697768451313224" type="Quibly">
-                                            <param id="0" name="Force">Quibly.Acceleration</param>
-                                            <param id="1" name="Angle">90</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="0" name="Call function" sid="125156352599693" type="Function">
+                                            <param id="0" name="Name">&quot;MoveDown&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1114,10 +1021,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Physics" id="2" name="Apply force at angle" sid="202331491330744" type="Quibly">
-                                            <param id="0" name="Force">Quibly.Acceleration</param>
-                                            <param id="1" name="Angle">0</param>
-                                            <param id="2" name="Image point">0</param>
+                                        <action id="0" name="Call function" sid="981391466339399" type="Function">
+                                            <param id="0" name="Name">&quot;MoveRight&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1153,13 +1059,13 @@
                                     <conditions>
                                         <condition id="7" name="On button released" sid="568454077811028" type="Gamepad">
                                             <param id="0" name="Gamepad">2</param>
-                                            <param id="1" name="Button">0</param>
+                                            <param id="1" name="Button">7</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="405214707027898" type="Quibly">
-                                            <param id="0" name="Instance variable">IsShooting</param>
-                                            <param id="1" name="Value">0</param>
+                                        <action id="0" name="Call function" sid="819769389843819" type="Function">
+                                            <param id="0" name="Name">&quot;FireStop&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1172,15 +1078,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="420088095306412" type="Quibly">
-                                            <param id="0" name="Instance variable">IsShielding</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="657259772440614" type="Shield">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="11" name="Set collisions enabled" sid="362653553114906" type="Shield">
-                                            <param id="0" name="Collisions">1</param>
+                                        <action id="0" name="Call function" sid="536485857430542" type="Function">
+                                            <param id="0" name="Name">&quot;ShieldOn&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1192,29 +1092,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="250036463459710" type="Quibly">
-                                            <param id="0" name="Instance variable">IsShielding</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="553353388606068" type="Shield">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="11" name="Set collisions enabled" sid="513621421543847" type="Shield">
-                                            <param id="0" name="Collisions">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="497073956769557">
-                                    <conditions>
-                                        <condition id="-1" name="Every tick" sid="709868081635993" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-22" name="Set angle toward position" sid="982600696296898" type="Shield">
-                                            <param id="0" name="X">Reticle.X</param>
-                                            <param id="1" name="Y">Reticle.Y</param>
-                                        </action>
-                                        <action id="-16" name="Set opacity" sid="261110054380739" type="Shield">
-                                            <param id="0" name="Opacity">Quibly.Energy</param>
+                                        <action id="0" name="Call function" sid="910463027596619" type="Function">
+                                            <param id="0" name="Name">&quot;ShieldOff&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -2862,11 +2742,6 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="513330474192355" title="Common ">
-            <sub-events>
-                <comment>Dying</comment>
-            </sub-events>
-        </event-group>
         <event-group description="" sid="705189525237315" title="Death">
             <sub-events>
                 <event-block sid="835129586373342">
@@ -2911,7 +2786,7 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="560560638482247" type="Quibly">
                                     <param id="0" name="Instance variable">DeathTimer</param>
-                                    <param id="1" name="Value">3</param>
+                                    <param id="1" name="Value">Quibly.MaxDeathTime</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="471251738398170" type="Quibly">
                                     <param id="0" name="Instance variable">Damage</param>
@@ -2923,6 +2798,24 @@
                                 </action>
                                 <action id="-6" name="Set height" sid="955295732853773" type="Healthbar">
                                     <param id="0" name="Height">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="986211673859872" type="Quibly">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="229598680440730" type="Quibly">
+                                    <param id="0" name="Instance variable">IsFalling</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="367889728224048" type="Quibly">
+                                    <param id="0" name="Instance variable">Scale</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="238209410949613" type="Quibly">
+                                    <param id="0" name="Scale">Quibly.Scale</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="302669885524394" type="Head">
+                                    <param id="0" name="Scale">Quibly.Scale</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2965,7 +2858,7 @@
                                     <actions>
                                         <action id="0" name="Spawn another object" sid="731794033735305" type="Head">
                                             <param id="0" name="Object">Bullet</param>
-                                            <param id="1" name="Layer">0</param>
+                                            <param id="1" name="Layer">1</param>
                                             <param id="2" name="Image point">1</param>
                                         </action>
                                         <action id="5" name="Set frame" sid="114862505637065" type="Bullet">
@@ -3004,7 +2897,7 @@
                                     <actions>
                                         <action id="0" name="Spawn another object" sid="262787740300630" type="Head">
                                             <param id="0" name="Object">Bullet</param>
-                                            <param id="1" name="Layer">0</param>
+                                            <param id="1" name="Layer">1</param>
                                             <param id="2" name="Image point">1</param>
                                         </action>
                                         <action id="5" name="Set frame" sid="722243463755555" type="Bullet">
@@ -3037,6 +2930,273 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="220832448749233">
+                    <conditions>
+                        <condition id="0" name="On function" sid="170721676195044" type="Function">
+                            <param id="0" name="Name">&quot;FireStop&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="564199948422837">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="704429906047389" type="Quibly">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="809099630314735" type="Quibly">
+                                    <param id="0" name="Instance variable">IsShooting</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="952224559436187" title="Shield">
+            <sub-events>
+                <event-block sid="257344211224154">
+                    <conditions>
+                        <condition id="0" name="On function" sid="333881141750779" type="Function">
+                            <param id="0" name="Name">&quot;ShieldOn&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="774250143560172">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="991312753036977" type="Quibly">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="765577446467424" type="Quibly">
+                                    <param id="0" name="Instance variable">IsShielding</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="558011153977931" type="Shield">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="11" name="Set collisions enabled" sid="451368063138800" type="Shield">
+                                    <param id="0" name="Collisions">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="349450589417524">
+                    <conditions>
+                        <condition id="0" name="On function" sid="901127563959865" type="Function">
+                            <param id="0" name="Name">&quot;ShieldOff&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="703691932940696">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="570367840045618" type="Quibly">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="189248819943047" type="Quibly">
+                                    <param id="0" name="Instance variable">IsShielding</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="365247246068005" type="Shield">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="11" name="Set collisions enabled" sid="862084882998759" type="Shield">
+                                    <param id="0" name="Collisions">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group description="" sid="105057000523034" title="Shield Update">
+                    <sub-events>
+                        <event-block sid="849152557712742">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="502442434736769" type="Quibly">
+                                    <param id="0" name="Instance variable">IsShielding</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="273982963851311" type="Shield">
+                                    <param id="0" name="Opacity">Quibly.Energy</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="749287346080151">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="237160812161798" type="Quibly">
+                                            <param id="0" name="Instance variable">Energy</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="496767493219485" type="Quibly">
+                                            <param id="0" name="Instance variable">Energy</param>
+                                            <param id="1" name="Value">Shield.EnergyDrainRate</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="705757296573402">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="907503046466581" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="318921056357027" type="Function">
+                                            <param id="0" name="Name">&quot;ShieldOff&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="357458468324426">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="958899688529100" type="Quibly">
+                                            <param id="0" name="Instance variable">ControllerPlayer</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-22" name="Set angle toward position" sid="165591645361026" type="Shield">
+                                            <param id="0" name="X">Reticle.X</param>
+                                            <param id="1" name="Y">Reticle.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="477366612761178">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="160144633748588" type="Quibly">
+                                            <param id="0" name="Instance variable">ControllerPlayer</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-22" name="Set angle toward position" sid="368197319291609" type="Shield">
+                                            <param id="0" name="X">Mouse.X</param>
+                                            <param id="1" name="Y">Mouse.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="333151831813787" title="Movement">
+            <sub-events>
+                <event-block sid="512932142635818">
+                    <conditions>
+                        <condition id="0" name="On function" sid="496008377891762" type="Function">
+                            <param id="0" name="Name">&quot;MoveUp&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="203392454319374">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="769919885225182" type="Quibly">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="224036770257804" type="Quibly">
+                                    <param id="0" name="Instance variable">Active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="2" name="Apply force at angle" sid="651667077956277" type="Quibly">
+                                    <param id="0" name="Force">Quibly.Acceleration</param>
+                                    <param id="1" name="Angle">-90</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="515044656177684">
+                    <conditions>
+                        <condition id="0" name="On function" sid="303541538567077" type="Function">
+                            <param id="0" name="Name">&quot;MoveLeft&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="525785167787214">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="166284457933898" type="Quibly">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="309181444699003" type="Quibly">
+                                    <param id="0" name="Instance variable">Active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="2" name="Apply force at angle" sid="311951023296581" type="Quibly">
+                                    <param id="0" name="Force">Quibly.Acceleration</param>
+                                    <param id="1" name="Angle">180</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="777023021027826">
+                    <conditions>
+                        <condition id="0" name="On function" sid="473219877089069" type="Function">
+                            <param id="0" name="Name">&quot;MoveDown&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="535838660774199">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="910086037413896" type="Quibly">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="624012696623011" type="Quibly">
+                                    <param id="0" name="Instance variable">Active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="2" name="Apply force at angle" sid="273839136216111" type="Quibly">
+                                    <param id="0" name="Force">Quibly.Acceleration</param>
+                                    <param id="1" name="Angle">90</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="976577737905121">
+                    <conditions>
+                        <condition id="0" name="On function" sid="897124100157871" type="Function">
+                            <param id="0" name="Name">&quot;MoveRight&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="969959980752934">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="421824316559311" type="Quibly">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="729800259737098" type="Quibly">
+                                    <param id="0" name="Instance variable">Active</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="2" name="Apply force at angle" sid="310503510932174" type="Quibly">
+                                    <param id="0" name="Force">Quibly.Acceleration</param>
+                                    <param id="1" name="Angle">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
