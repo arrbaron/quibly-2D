@@ -35,7 +35,7 @@
             <actions>
                 <action id="-10" name="Set value" sid="588943668294443" type="Quibly">
                     <param id="0" name="Instance variable">DeathTimer</param>
-                    <param id="1" name="Value">3</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
