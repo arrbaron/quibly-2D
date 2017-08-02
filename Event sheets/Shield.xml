@@ -2,47 +2,5 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Shield</name>
-    <events>
-        <event-block sid="325923129351666">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="362161907103776" type="System" />
-            </conditions>
-            <actions />
-        </event-block>
-        <event-block sid="658224484419350">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="558664994864911" type="Quibly">
-                    <param id="0" name="Instance variable">IsShielding</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="833641510914837">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="345422211016997" type="System">
-                            <param id="0" name="Interval (seconds)">1</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="672667050727127">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="570694271894172" type="Quibly">
-                                    <param id="0" name="Instance variable">Energy</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-12" name="Subtract from" sid="520167885831060" type="Quibly">
-                                    <param id="0" name="Instance variable">Energy</param>
-                                    <param id="1" name="Value">Shield.EnergyDrainRate</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
-    </events>
+    <events />
 </c2eventsheet>

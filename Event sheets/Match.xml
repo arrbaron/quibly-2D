@@ -5,37 +5,63 @@
     <events>
         <variable constant="0" name="StartingLives" sid="699376607681156" static="0" type="number">3</variable>
         <variable constant="0" name="Timer" sid="980673310669713" static="0" type="number">180</variable>
-        <event-block sid="642113944425208">
+        <event-block sid="806682358424500">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="581471590578715" type="Killzone">
-                    <param id="0" name="Object">Quibly</param>
+                <condition id="-6" name="Every X seconds" sid="875590259233900" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
                 </condition>
             </conditions>
             <actions />
-            <sub-events>
-                <event-block sid="806682358424500">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="875590259233900" type="System">
-                            <param id="0" name="Interval (seconds)">1.0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Subtract from" sid="259221439483650" type="Quibly">
-                            <param id="0" name="Instance variable">DeathTimer</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
-        <event-block sid="821447994587062">
+        <event-block sid="642113944425208">
             <conditions>
-                <condition id="-22" name="Else" sid="530809115742829" type="System" />
+                <condition id="0" name="On collision with another object" sid="581471590578715" type="Killzone">
+                    <param id="0" name="Object">Quibly</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="381223885254512" type="Quibly">
+                    <param id="0" name="Instance variable">IsFalling</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="178387616186540" type="Quibly">
+                    <param id="0" name="Instance variable">Active</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="259221439483650" type="Quibly">
+                    <param id="0" name="Instance variable">DeathTimer</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="155446653187905">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="134753182260188" type="SafeZone">
+                    <param id="0" name="Object">Quibly</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-10" name="Set value" sid="588943668294443" type="Quibly">
                     <param id="0" name="Instance variable">DeathTimer</param>
+                    <param id="1" name="Value">Quibly.MaxDeathTime</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="215021153692568" type="Quibly">
+                    <param id="0" name="Instance variable">Active</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="704465327328063" type="Quibly">
+                    <param id="0" name="Instance variable">IsFalling</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="162560791159173" type="Quibly">
+                    <param id="0" name="Instance variable">Scale</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="9" name="Set scale" sid="920540167710732" type="Quibly">
+                    <param id="0" name="Scale">Quibly.Scale</param>
+                </action>
+                <action id="9" name="Set scale" sid="799448030428383" type="Head">
+                    <param id="0" name="Scale">Quibly.Scale</param>
                 </action>
             </actions>
         </event-block>
@@ -86,5 +112,24 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="462204929127351">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="852072478218454" type="Quibly">
+                    <param id="0" name="Instance variable">IsFalling</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="947745531299536" type="Quibly">
+                    <param id="0" name="Instance variable">Scale</param>
+                    <param id="1" name="Value">Quibly.Scale - 0.01</param>
+                </action>
+                <action id="9" name="Set scale" sid="142899215404593" type="Quibly">
+                    <param id="0" name="Scale">Quibly.Scale</param>
+                </action>
+                <action id="9" name="Set scale" sid="356325779218866" type="Head">
+                    <param id="0" name="Scale">Quibly.Scale</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
