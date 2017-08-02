@@ -92,7 +92,7 @@
                         <IsShooting>false</IsShooting>
                         <IsShielding>false</IsShielding>
                         <Deadzone>50</Deadzone>
-                        <DeathTimer>3</DeathTimer>
+                        <DeathTimer>1</DeathTimer>
                         <Lives>3</Lives>
                         <RotationSpeed>3</RotationSpeed>
                         <ControllerPlayer>false</ControllerPlayer>
@@ -142,7 +142,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Force>3</Force>
+                        <Force>4</Force>
                         <Damage>5</Damage>
                         <Owner>0</Owner>
                         <Owner_Multi></Owner_Multi>
@@ -150,7 +150,7 @@
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>600</speed>
+                                <speed>700</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
@@ -407,7 +407,7 @@
                         <IsShooting>false</IsShooting>
                         <IsShielding>false</IsShielding>
                         <Deadzone>50</Deadzone>
-                        <DeathTimer>3</DeathTimer>
+                        <DeathTimer>1</DeathTimer>
                         <Lives>3</Lives>
                         <RotationSpeed>3</RotationSpeed>
                         <ControllerPlayer>false</ControllerPlayer>
