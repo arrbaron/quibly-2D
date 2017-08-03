@@ -616,7 +616,7 @@
                     <properties>
                         <text>P1 Lives:</text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial,-16</font>
+                        <font>Arial,-18.4,700,0</font>
                         <color>255,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -646,7 +646,7 @@
                     <properties>
                         <text>P2 Lives:</text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial,-16</font>
+                        <font>Arial,-18.4,700,0</font>
                         <color>51,255,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -676,7 +676,7 @@
                     <properties>
                         <text>P3 Lives:</text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial,-16</font>
+                        <font>Arial,-18.4,700,0</font>
                         <color>51,153,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -706,7 +706,7 @@
                     <properties>
                         <text>P4 Lives:</text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial,-16</font>
+                        <font>Arial,-18.4,700,0</font>
                         <color>255,255,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
