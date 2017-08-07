@@ -84,6 +84,7 @@
                 <instance-variable name="Active" sid="118555139564217" type="boolean" />
                 <instance-variable name="MaxDeathTime" sid="581674182618457" type="number" />
                 <instance-variable name="IsFalling" sid="245456573696626" type="boolean" />
+                <instance-variable name="ShrinkRate" sid="773033850185976" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Physics" sid="181614599941760">
@@ -289,6 +290,9 @@
             <behaviors>
                 <behavior-type name="Pin" sid="759532924200382">
                     <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="484011645157662">
+                    <behavior id="Physics" />
                 </behavior-type>
             </behaviors>
             <container>
@@ -510,6 +514,7 @@
         </sound-folder>
         <file name="Boing.ogg" />
         <file name="Ow.ogg" />
+        <file name="uhoh.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
