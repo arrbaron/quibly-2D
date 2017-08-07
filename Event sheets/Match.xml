@@ -20,15 +20,11 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="381223885254512" type="Quibly">
-                    <param id="0" name="Instance variable">IsFalling</param>
-                    <param id="1" name="Value">1</param>
+                <action id="0" name="Call function" sid="579908021010573" type="Function">
+                    <param id="0" name="Name">&quot;Die&quot;</param>
+                    <param id="1" name="Parameter {n}">Quibly.UID</param>
                 </action>
-                <action id="-13" name="Set boolean" sid="178387616186540" type="Quibly">
-                    <param id="0" name="Instance variable">Active</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-12" name="Subtract from" sid="259221439483650" type="Quibly">
+                <action disabled="1" id="-12" name="Subtract from" sid="259221439483650" type="Quibly">
                     <param id="0" name="Instance variable">DeathTimer</param>
                     <param id="1" name="Value">3</param>
                 </action>
@@ -112,24 +108,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="462204929127351">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="852072478218454" type="Quibly">
-                    <param id="0" name="Instance variable">IsFalling</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="947745531299536" type="Quibly">
-                    <param id="0" name="Instance variable">Scale</param>
-                    <param id="1" name="Value">Quibly.Scale - 0.01</param>
-                </action>
-                <action id="9" name="Set scale" sid="142899215404593" type="Quibly">
-                    <param id="0" name="Scale">Quibly.Scale</param>
-                </action>
-                <action id="9" name="Set scale" sid="356325779218866" type="Head">
-                    <param id="0" name="Scale">Quibly.Scale</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>

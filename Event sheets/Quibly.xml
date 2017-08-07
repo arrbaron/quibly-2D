@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Quibly</name>
     <events>
+        <variable constant="0" name="RespawnDelay" sid="885344544836266" static="0" type="number">1.25</variable>
         <variable constant="0" name="PlayersAlive" sid="324734935806460" static="0" type="number">0</variable>
         <variable constant="0" name="MultiplayerMode" sid="564120173121962" static="0" type="number">0</variable>
         <variable constant="0" name="ControllersActive" sid="235911218407769" static="0" type="number">0</variable>
@@ -2744,77 +2745,163 @@
         </event-group>
         <event-group description="" sid="705189525237315" title="Death">
             <sub-events>
-                <event-block sid="835129586373342">
+                <event-block sid="807379283648081">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="824319952288862" type="Quibly">
-                            <param id="0" name="Instance variable">DeathTimer</param>
-                            <param id="1" name="Comparison">3</param>
+                        <condition id="0" name="On function" sid="755252114418639" type="Function">
+                            <param id="0" name="Name">&quot;Die&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="930092793576940">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="545582084244472" type="Quibly">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="161069876056845" type="Audio">
+                                    <param id="0" name="Audio file">uhoh</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="267348607528933" type="Quibly">
+                                    <param id="0" name="Instance variable">Active</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="164074097579020" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="648173520080754" type="Quibly">
+                                    <param id="0" name="Instance variable">IsFalling</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="215299461063016" type="Quibly">
+                                    <param id="0" name="Instance variable">Lives</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="763031002331850">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="681678947589437" type="Quibly">
+                                            <param id="0" name="Instance variable">Lives</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="561976567331794" type="System">
+                                            <param id="0" name="Seconds">RespawnDelay</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="654348052533373" type="System">
+                                            <param id="0" name="Variable">PlayersAlive</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="483750688662969" type="Quibly" />
+                                        <action id="-12" name="Set group active" sid="480167262769490" type="System">
+                                            <param id="0" name="Group name">&quot;Match End&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="305911241160586">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="604848055218820" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="559352213899112" type="Function">
+                                            <param id="0" name="Name">&quot;Respawn&quot;</param>
+                                            <param id="1" name="Parameter {n}">Quibly.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="995422521768917">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="430154824830677" type="Quibly">
+                            <param id="0" name="Instance variable">IsFalling</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="444716191236553" type="Quibly">
+                            <param id="0" name="Instance variable">Scale</param>
+                            <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-12" name="Subtract from" sid="215299461063016" type="Quibly">
-                            <param id="0" name="Instance variable">Lives</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="-12" name="Subtract from" sid="300874028913592" type="Quibly">
+                            <param id="0" name="Instance variable">Scale</param>
+                            <param id="1" name="Value">Quibly.ShrinkRate</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="820422718933691" type="Quibly">
+                            <param id="0" name="Scale">Quibly.Scale</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="444933250437631" type="Head">
+                            <param id="0" name="Scale">Quibly.Scale</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="136741279633314" type="Quibly">
+                            <param id="0" name="Instance variable">ShrinkRate</param>
+                            <param id="1" name="Value">0.0002</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="308746323551306" title="Respawn">
+            <sub-events>
+                <event-block sid="140047404069135">
+                    <conditions>
+                        <condition id="0" name="On function" sid="705665561997417" type="Function">
+                            <param id="0" name="Name">&quot;Respawn&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="763031002331850">
+                        <event-block sid="144198430576642">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="681678947589437" type="Quibly">
-                                    <param id="0" name="Instance variable">Lives</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">0</param>
+                                <condition id="-14" name="Pick by unique ID" sid="705996251592670" type="Quibly">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-11" name="Subtract from" sid="654348052533373" type="System">
-                                    <param id="0" name="Variable">PlayersAlive</param>
-                                    <param id="1" name="Value">1</param>
+                                <action id="-16" name="Wait" sid="663418620891071" type="System">
+                                    <param id="0" name="Seconds">RespawnDelay</param>
                                 </action>
-                                <action id="-9" name="Destroy" sid="483750688662969" type="Quibly" />
-                                <action id="-12" name="Set group active" sid="480167262769490" type="System">
-                                    <param id="0" name="Group name">&quot;Match End&quot;</param>
-                                    <param id="1" name="State">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="305911241160586">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="604848055218820" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="560560638482247" type="Quibly">
-                                    <param id="0" name="Instance variable">DeathTimer</param>
-                                    <param id="1" name="Value">Quibly.MaxDeathTime</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="471251738398170" type="Quibly">
+                                <action id="-10" name="Set value" sid="247871242176895" type="Quibly">
                                     <param id="0" name="Instance variable">Damage</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="476843224263757" type="Quibly">
+                                <action id="-3" name="Set position" sid="430448107877648" type="Quibly">
                                     <param id="0" name="X">random(100, 1000)</param>
                                     <param id="1" name="Y">random(100, 700)</param>
                                 </action>
-                                <action id="-6" name="Set height" sid="955295732853773" type="Healthbar">
+                                <action id="-6" name="Set height" sid="520582557575009" type="Healthbar">
                                     <param id="0" name="Height">0</param>
                                 </action>
-                                <action id="-13" name="Set boolean" sid="986211673859872" type="Quibly">
+                                <action id="-13" name="Set boolean" sid="917460289832706" type="Quibly">
                                     <param id="0" name="Instance variable">Active</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-13" name="Set boolean" sid="229598680440730" type="Quibly">
+                                <action id="-13" name="Set boolean" sid="943271581661601" type="Quibly">
                                     <param id="0" name="Instance variable">IsFalling</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="367889728224048" type="Quibly">
+                                <action id="-10" name="Set value" sid="501109956186138" type="Quibly">
                                     <param id="0" name="Instance variable">Scale</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="9" name="Set scale" sid="238209410949613" type="Quibly">
+                                <action id="-10" name="Set value" sid="823424923923088" type="Quibly">
+                                    <param id="0" name="Instance variable">ShrinkRate</param>
+                                    <param id="1" name="Value">0.005</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="772181442263693" type="Head">
                                     <param id="0" name="Scale">Quibly.Scale</param>
                                 </action>
-                                <action id="9" name="Set scale" sid="302669885524394" type="Head">
+                                <action id="9" name="Set scale" sid="400129746751577" type="Quibly">
                                     <param id="0" name="Scale">Quibly.Scale</param>
                                 </action>
                             </actions>
@@ -2831,23 +2918,26 @@
                             <param id="0" name="Name">&quot;Fire&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="7" name="Play (by name)" sid="997349474701615" type="Audio">
-                            <param id="0" name="Folder">0</param>
-                            <param id="1" name="Audio file name">ShootSounds.At(Function.Param(1) - 1, floor(random(0, 3)))</param>
-                            <param id="3" name="Loop">0</param>
-                            <param id="4" name="Volume">0</param>
-                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
                         <event-block sid="972721288385609">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="812935906208588" type="Quibly">
                                     <param id="0" name="Unique ID">Function.Param(0)</param>
                                 </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="244493315766421" type="Quibly">
+                                    <param id="0" name="Instance variable">Active</param>
+                                </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="7" name="Play (by name)" sid="997349474701615" type="Audio">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">ShootSounds.At(Function.Param(1) - 1, floor(random(0, 3)))</param>
+                                    <param id="3" name="Loop">0</param>
+                                    <param id="4" name="Volume">0</param>
+                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="631005210650277">
                                     <conditions>
